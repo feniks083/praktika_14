@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Школа ответственного владельца — Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="shcool.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_doga.html"
+                  ><i class="fas fa-book-open"></i> Породы собак</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+    </header>
+
+
+    <!-- Hero секция -->
+    <section class="school-hero">
+      <div class="container">
+        <div class="school-badge">
+          <i class="fas fa-graduation-cap"></i> Бесплатное обучение
+        </div>
+        <h1>Школа ответственного владельца<br />«Довольный пёс»</h1>
+        <p>
+          Станьте лучшим хозяином для своего питомца! Обучающие курсы, статьи и
+          полезные советы.
+        </p>
+      </div>
+    </section>
+
+    <!-- Основные курсы -->
+    <section class="sections-section">
+      <div class="container">
+        <h2 class="section-title">Образовательные курсы</h2>
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-icon"><i class="fas fa-baby-carriage"></i></div>
+            <h3>Воспитание щенка</h3>
+            <p>
+              Как приучить к лотку, отучить грызть вещи и вырастить послушного
+              друга.
+            </p>
+            <button class="course-btn">Начать курс</button>
+          </div>
+          <div class="course-card">
+            <div class="course-icon"><i class="fas fa-heartbeat"></i></div>
+            <h3>Здоровье питомца</h3>
+            <p>
+              Прививки, первая помощь, профилактика заболеваний и уход за
+              больным животным.
+            </p>
+            <button class="course-btn">Начать курс</button>
+          </div>
+          <div class="course-card">
+            <div class="course-icon"><i class="fas fa-utensils"></i></div>
+            <h3>Правильное питание</h3>
+            <p>
+              Как выбрать корм, что можно и нельзя давать, особенности разных
+              пород.
+            </p>
+            <button class="course-btn">Начать курс</button>
+          </div>
+          <div class="course-card">
+            <div class="course-icon"><i class="fas fa-paw"></i></div>
+            <h3>Поведение кошек</h3>
+            <p>
+              Понимаем язык тела, решаем проблемы с агрессией и приучаем к
+              когтеточке.
+            </p>
+            <button class="course-btn">Начать курс</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Полезные материалы -->
+    <section class="resources-section">
+      <div class="container">
+        <h2 class="section-title">Полезные материалы</h2>
+        <div class="resources-grid">
+          <div class="resource-card">
+            <div class="resource-image"><i class="fas fa-file-alt"></i></div>
+            <div class="resource-content">
+              <h4>Чек-лист: первый день щенка в доме</h4>
+              <p>Что купить, как подготовить квартиру и чему учить сразу.</p>
+              <button class="course-btn" style="margin-top: 16px">
+                Скачать PDF
+              </button>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-image"><i class="fas fa-video"></i></div>
+            <div class="resource-content">
+              <h4>Видеоурок: как приучить к лотку за 3 дня</h4>
+              <p>Пошаговая инструкция от кинолога.</p>
+              <button class="course-btn" style="margin-top: 16px">
+                Смотреть
+              </button>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-image">
+              <i class="fas fa-chalkboard-user"></i>
+            </div>
+            <div class="resource-content">
+              <h4>Вебинар: первая помощь питомцу</h4>
+              <p>Что делать при отравлении, травмах и тепловом ударе.</p>
+              <button class="course-btn" style="margin-top: 16px">
+                Записаться
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Викторина -->
+    <section class="quiz-section">
+      <div class="container">
+        <h2 class="section-title">Проверьте свои знания</h2>
+        <div class="quiz-container">
+          <div class="quiz-question" id="quizQuestion">
+            Как часто нужно прививать взрослую собаку?
+          </div>
+          <div class="quiz-options" id="quizOptions">
+            <div class="quiz-option" data-correct="false">Раз в полгода</div>
+            <div class="quiz-option" data-correct="true">Раз в год</div>
+            <div class="quiz-option" data-correct="false">Раз в 3 года</div>
+            <div class="quiz-option" data-correct="false">Только один раз</div>
+          </div>
+          <div class="quiz-result" id="quizResult"></div>
+          <button
+            id="nextQuestion"
+            style="
+              margin-top: 24px;
+              background: #2563eb;
+              color: white;
+              border: none;
+              padding: 10px 24px;
+              border-radius: 40px;
+              cursor: pointer;
+              display: none;
+            "
+          >
+            Следующий вопрос →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Сертификат -->
+    <section class="certificate-section">
+      <div class="container">
+        <div class="certificate-card">
+          <div class="certificate-icon"><i class="fas fa-award"></i></div>
+          <h3>Получите сертификат</h3>
+          <p>
+            Пройдите все курсы и сдайте итоговый тест, чтобы получить
+            официальный сертификат ответственного владельца.
+          </p>
+          <button class="btn-certificate">Пройти итоговый тест</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Pet Story — Школа ответственного владельца «Довольный пёс»</p>
+        <p style="font-size: 0.75rem; margin-top: 12px">
+          Станьте лучшим другом для своего питомца!
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Викторина
+      const questions = [
+        {
+          text: "Как часто нужно прививать взрослую собаку?",
+          correct: "Раз в год",
+          options: [
+            "Раз в полгода",
+            "Раз в год",
+            "Раз в 3 года",
+            "Только один раз",
+          ],
+        },
+        {
+          text: "Что из этого НЕЛЬЗЯ давать собаке?",
+          correct: "Шоколад",
+          options: ["Мясо", "Морковь", "Шоколад", "Рис"],
+        },
+        {
+          text: "С какого возраста можно начинать дрессировку щенка?",
+          correct: "С 2-3 месяцев",
+          options: [
+            "С 2-3 месяцев",
+            "С 6 месяцев",
+            "С 1 года",
+            "После всех прививок",
+          ],
+        },
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+      const quizQuestion = document.getElementById("quizQuestion");
+      const quizOptions = document.getElementById("quizOptions");
+      const quizResult = document.getElementById("quizResult");
+      const nextBtn = document.getElementById("nextQuestion");
+
+      function loadQuestion() {
+        const q = questions[currentQuestion];
+        quizQuestion.textContent = q.text;
+        quizOptions.innerHTML = q.options
+          .map(
+            (opt) =>
+              `<div class="quiz-option" data-correct="${
+                opt === q.correct ? "true" : "false"
+              }">${opt}</div>`
+          )
+          .join("");
+        quizResult.style.display = "none";
+        quizResult.innerHTML = "";
+        nextBtn.style.display = "none";
+
+        document.querySelectorAll(".quiz-option").forEach((opt) => {
+          opt.addEventListener("click", (e) => {
+            const isCorrect = opt.dataset.correct === "true";
+            if (isCorrect) score++;
+            quizResult.style.display = "block";
+            if (isCorrect) {
+              quizResult.innerHTML =
+                "<span style='color:#10b981'>✓ Правильно!</span>";
+              quizResult.style.background = "#e6f7e6";
+            } else {
+              const correctAnswer = q.options.find(
+                (_, idx) => q.options[idx] === q.correct
+              );
+              quizResult.innerHTML = `<span style='color:#dc2626'>✗ Неправильно. Правильный ответ: ${q.correct}</span>`;
+              quizResult.style.background = "#fee2e2";
+            }
+            nextBtn.style.display = "block";
+            document.querySelectorAll(".quiz-option").forEach((opt) => {
+              opt.style.pointerEvents = "none";
+            });
+          });
+        });
+      }
+
+      nextBtn.addEventListener("click", () => {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+          loadQuestion();
+          document.querySelectorAll(".quiz-option").forEach((opt) => {
+            opt.style.pointerEvents = "auto";
+          });
+        } else {
+          quizQuestion.textContent = `Тест завершён! Вы набрали ${score} из ${questions.length} баллов.`;
+          quizOptions.innerHTML = "";
+          quizResult.style.display = "block";
+          quizResult.innerHTML =
+            score === questions.length
+              ? "🎉 Поздравляем! Вы настоящий эксперт!"
+              : "📚 Попробуйте пройти курсы, чтобы узнать больше!";
+          quizResult.style.background = "#eef2ff";
+          nextBtn.style.display = "none";
+        }
+      });
+
+      loadQuestion();
+
+      // Обработчики кнопок
+      document
+        .querySelectorAll(".course-btn, .btn-certificate")
+        .forEach((btn) => {
+          btn.addEventListener("click", () =>
+            alert("Демо-версия: курс откроется в ближайшее время")
+          );
+        });
+      document
+        .querySelector(".btn-login")
+        .addEventListener("click", () => alert("Вход в личный кабинет"));
+      document
+        .querySelector(".notification")
+        .addEventListener("click", () => alert("Уведомления"));
+    </script>
+  </body>
+</html>

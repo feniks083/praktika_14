@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Прививки для собак — Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="privivki_doga.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img src="./img/logo.png" alt="Pet Story" />
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_doga.html"
+                  ><i class="fas fa-book-open"></i> Породы собак</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="container">
+        <h1>💉 Прививки для собак</h1>
+        <p>
+          График вакцинации, правила подготовки и ответы на частые вопросы.
+          Защитите своего питомца от опасных заболеваний
+        </p>
+      </div>
+    </section>
+
+    <section class="schedule-section">
+      <div class="container">
+        <h2 class="section-title">График вакцинации щенков до года</h2>
+        <div style="overflow-x: auto">
+          <table class="vaccination-table">
+            <thead>
+              <tr>
+                <th>Возраст</th>
+                <th>Вакцинация</th>
+                <th>Примечания</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8–10 недель</td>
+                <td>
+                  Первая комплексная вакцина (чума, парвовирус, аденовирус,
+                  парагрипп)
+                </td>
+                <td>За 10–14 дней до этого провести дегельминтизацию</td>
+              </tr>
+              <tr>
+                <td>12 недель</td>
+                <td>Ревакцинация + вакцина от бешенства</td>
+                <td>После второй прививки карантин 14 дней</td>
+              </tr>
+              <tr>
+                <td>6–12 месяцев</td>
+                <td>Ревакцинация комплексной вакциной</td>
+                <td>После смены зубов</td>
+              </tr>
+              <tr>
+                <td>Ежегодно</td>
+                <td>Ревакцинация комплексной вакциной и от бешенства</td>
+                <td>Пожизненно, один раз в год</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        <h2 class="section-title">Статьи о вакцинации</h2>
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Поиск по статьям..."
+          />
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="stats-info" id="statsInfo">Загрузка...</div>
+        <div class="articles-grid" id="articlesGrid"></div>
+      </div>
+    </section>
+
+    <section class="myths-section">
+      <div class="container">
+        <h2 class="section-title">Мифы о вакцинации</h2>
+        <div class="myths-grid">
+          <div class="myth-card">
+            <div class="myth-icon"><i class="fas fa-ban"></i></div>
+            <div class="myth-title">
+              Миф: Вакцинация может вызвать заболевание
+            </div>
+            <p>
+              Современные вакцины безопасны. Ослабленный вирус не способен
+              вызвать болезнь у здорового питомца.
+            </p>
+          </div>
+          <div class="myth-card">
+            <div class="myth-icon"><i class="fas fa-dog"></i></div>
+            <div class="myth-title">
+              Миф: Домашним собакам прививки не нужны
+            </div>
+            <p>
+              Вирусы можно принести на обуви. Кроме того, бешенство смертельно
+              опасно для человека.
+            </p>
+          </div>
+          <div class="myth-card">
+            <div class="myth-icon"><i class="fas fa-clock"></i></div>
+            <div class="myth-title">Миф: Достаточно привить щенка один раз</div>
+            <p>
+              Иммунитет ослабевает. Ежегодная ревакцинация — единственный способ
+              надёжной защиты.
+            </p>
+          </div>
+          <div class="myth-card">
+            <div class="myth-icon"><i class="fas fa-syringe"></i></div>
+            <div class="myth-title">Миф: Прививка от бешенства опасна</div>
+            <p>
+              Бешенство неизлечимо и смертельно. Риск от вакцины минимален по
+              сравнению с риском заболевания.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Pet Story — Прививки для собак</p>
+        <p style="font-size: 0.75rem; margin-top: 12px">
+          Вакцинация — основа здоровья вашего питомца
+        </p>
+      </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal-overlay" id="articleModal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h2 id="modalTitle">Заголовок статьи</h2>
+          <button class="modal-close" id="closeModalBtn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <script>
+      // Контент статей для собак
+      const articlesContent = {
+        "Прививка от бешенства собаке": {
+          title: "Прививка от бешенства собаке",
+          content: `
+            <div class="article-icon"><i class="fas fa-skull-crossbones"></i></div>
+            <p>Бешенство — смертельное заболевание, общее для человека и животных. Вакцинация от бешенства обязательна по закону для всех собак.</p>
+            
+            <h3>Как часто делать прививку от бешенства?</h3>
+            <ul>
+              <li><strong>Первый раз:</strong> в 12 недель (можно с 3 месяцев)</li>
+              <li><strong>Ревакцинация:</strong> ежегодно</li>
+              <li>Некоторые вакцины имеют срок действия 3 года, но по закону РФ прививка должна делаться ежегодно</li>
+            </ul>
+            
+            <h3>Какие вакцины используются?</h3>
+            <ul>
+              <li><strong>Нобивак Rabies (Нидерланды)</strong> — безопасная вакцина для щенков с 12 недель</li>
+              <li><strong>Рабизин (Франция)</strong> — инактивированная вакцина, хорошо переносится</li>
+              <li><strong>Дефенсор 3 (США)</strong> — современная вакцина, можно с 12 недель</li>
+            </ul>
+            
+            <h3>Подготовка к прививке:</h3>
+            <ul>
+              <li>Дегельминтизация за 10-14 дней</li>
+              <li>Питомец должен быть клинически здоров</li>
+              <li>Температура тела в норме (37,5-39°C)</li>
+            </ul>
+          `
+        },
+        "Прививки щенкам до года: таблица вакцинации": {
+          title: "Прививки щенкам до года: таблица вакцинации",
+          content: `
+            <div class="article-icon"><i class="fas fa-calendar-alt"></i></div>
+            <p>Правильный график вакцинации формирует стойкий иммунитет у щенка. Рассмотрим подробный календарь прививок.</p>
+            
+            <h3>График вакцинации:</h3>
+            <ul>
+              <li><strong>8-10 недель:</strong> первая комплексная вакцина (чума, парвовирус, аденовирус, парагрипп)</li>
+              <li><strong>12 недель:</strong> ревакцинация + прививка от бешенства</li>
+              <li><strong>6-12 месяцев:</strong> ревакцинация после смены зубов</li>
+              <li><strong>Ежегодно:</strong> ревакцинация комплексной вакциной и от бешенства</li>
+            </ul>
+            
+            <h3>От каких болезней защищают прививки?</h3>
+            <ul>
+              <li><strong>Чума плотоядных</strong> — тяжелое вирусное заболевание с высокой смертностью</li>
+              <li><strong>Парвовирусный энтерит</strong> — поражает кишечник и сердце</li>
+              <li><strong>Аденовироз</strong> — инфекционный гепатит и ларинготрахеит</li>
+              <li><strong>Лептоспироз</strong> — бактериальная инфекция, опасная для человека</li>
+            </ul>
+          `
+        },
+        "Когда и как проводить вакцинацию?": {
+          title: "Когда и как проводить вакцинацию?",
+          content: `
+            <div class="article-icon"><i class="fas fa-clock"></i></div>
+            <p>Правильная подготовка к прививке — залог успешной вакцинации. Рассказываем, что нужно знать владельцу.</p>
+            
+            <h3>За 10-14 дней до прививки:</h3>
+            <ul>
+              <li>Проведите дегельминтизацию (обработку от глистов)</li>
+              <li>При необходимости — обработку от блох и клещей</li>
+            </ul>
+            
+            <h3>В день вакцинации:</h3>
+            <ul>
+              <li>Щенок должен быть активным, с хорошим аппетитом</li>
+              <li>Температура тела в норме</li>
+              <li>Отсутствуют признаки болезни (кашель, чихание, рвота, диарея)</li>
+            </ul>
+            
+            <h3>Когда нельзя делать прививку:</h3>
+            <ul>
+              <li>Повышенная температура</li>
+              <li>Недавно перенесенное заболевание</li>
+              <li>Смена зубов (у некоторых пород)</li>
+              <li>Беременность и лактация у сук</li>
+            </ul>
+          `
+        },
+        "Вакцинация собак: всё, что нужно знать": {
+          title: "Вакцинация собак: всё, что нужно знать",
+          content: `
+            <div class="article-icon"><i class="fas fa-shield-virus"></i></div>
+            <p>Вакцинация — единственный надежный способ защитить собаку от опасных инфекций. Разберем основные вопросы.</p>
+            
+            <h3>Обязательные прививки для собак:</h3>
+            <ul>
+              <li><strong>Чума плотоядных</strong> — смертельно опасное заболевание</li>
+              <li><strong>Парвовирусный энтерит</strong> — тяжелое поражение ЖКТ</li>
+              <li><strong>Аденовироз</strong> — инфекционный гепатит</li>
+              <li><strong>Лептоспироз</strong> — опасен для человека</li>
+              <li><strong>Бешенство</strong> — обязательно по закону</li>
+            </ul>
+            
+            <h3>Дополнительные прививки (по показаниям):</h3>
+            <ul>
+              <li>Парагрипп</li>
+              <li>Коронавирус</li>
+              <li>Бордетеллез (питомниковый кашель)</li>
+              <li>Лайм-боррелиоз (от клещей)</li>
+            </ul>
+          `
+        },
+        "Мифы о вакцинации": {
+          title: "Мифы о вакцинации",
+          content: `
+            <div class="article-icon"><i class="fas fa-comment-dots"></i></div>
+            <p>Развенчиваем самые распространенные заблуждения о прививках для собак.</p>
+            
+            <h3>Миф 1: Домашним собакам прививки не нужны</h3>
+            <p>Вирусы можно принести на обуви, одежде. Кроме того, бешенство смертельно опасно для человека.</p>
+            
+            <h3>Миф 2: Вакцинация может вызвать заболевание</h3>
+            <p>Современные вакцины безопасны. Ослабленный вирус не способен вызвать болезнь у здорового питомца.</p>
+            
+            <h3>Миф 3: Достаточно привить щенка один раз</h3>
+            <p>Иммунитет ослабевает. Ежегодная ревакцинация — единственный способ надёжной защиты.</p>
+            
+            <h3>Миф 4: Прививка от бешенства опасна</h3>
+            <p>Бешенство неизлечимо и смертельно. Риск от вакцины минимален по сравнению с риском заболевания.</p>
+          `
+        },
+        "Реакция на прививку: что нормально, а когда бить тревогу": {
+          title: "Реакция на прививку: что нормально, а когда бить тревогу",
+          content: `
+            <div class="article-icon"><i class="fas fa-thermometer-half"></i></div>
+            <p>После вакцинации у собаки могут наблюдаться различные реакции. Важно отличать норму от патологии.</p>
+            
+            <h3>Нормальные реакции:</h3>
+            <ul>
+              <li>Небольшая вялость и сонливость (24-48 часов)</li>
+              <li>Снижение аппетита в первые сутки</li>
+              <li>Небольшое уплотнение в месте укола</li>
+              <li>Легкое повышение температуры (до 39,5°C)</li>
+            </ul>
+            
+            <h3>Тревожные симптомы (срочно к врачу):</h3>
+            <ul>
+              <li>Сильная рвота или диарея</li>
+              <li>Одышка, затрудненное дыхание</li>
+              <li>Отек морды или лап</li>
+              <li>Температура выше 40°C</li>
+              <li>Отказ от еды более 2 дней</li>
+              <li>Судороги</li>
+            </ul>
+          `
+        },
+        "Подготовка к вакцинации": {
+          title: "Подготовка к вакцинации",
+          content: `
+            <div class="article-icon"><i class="fas fa-list-check"></i></div>
+            <p>Правильная подготовка помогает избежать осложнений и обеспечивает формирование стойкого иммунитета.</p>
+            
+            <h3>Что нужно сделать:</h3>
+            <ul>
+              <li>Провести дегельминтизацию за 10-14 дней</li>
+              <li>Обработать от блох и клещей (если необходимо)</li>
+              <li>Убедиться, что питомец здоров</li>
+              <li>Измерить температуру (норма 37,5-39°C)</li>
+            </ul>
+            
+            <h3>Что взять с собой в клинику:</h3>
+            <ul>
+              <li>Ветеринарный паспорт</li>
+              <li>Лакомства для поощрения</li>
+              <li>Удобный поводок и намордник</li>
+            </ul>
+          `
+        }
+      };
+
+      // DOM элементы модального окна
+      const modal = document.getElementById("articleModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalBody = document.getElementById("modalBody");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+
+      function openArticleModal(articleTitle) {
+        const article = articlesContent[articleTitle];
+        if (article) {
+          modalTitle.textContent = article.title;
+          modalBody.innerHTML = article.content;
+          modal.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+      }
+
+      function closeModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      closeModalBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // Данные статей
+      const articles = [
+        {
+          title: "Прививка от бешенства собаке",
+          desc: "Как часто делать и как выбрать вакцину. График вакцинации и особенности.",
+          icon: "fas fa-skull-crossbones",
+        },
+        {
+          title: "Прививки щенкам до года: таблица вакцинации",
+          desc: "Подробный календарь прививок для щенков: сроки, подготовка, возможные реакции.",
+          icon: "fas fa-calendar-alt",
+        },
+        {
+          title: "Когда и как проводить вакцинацию?",
+          desc: "Правила подготовки к прививке: дегельминтизация, осмотр, возрастные ограничения.",
+          icon: "fas fa-clock",
+        },
+        {
+          title: "Вакцинация собак: всё, что нужно знать",
+          desc: "От чего защищают прививки, какие бывают вакцины и как формируется иммунитет.",
+          icon: "fas fa-shield-virus",
+        },
+        {
+          title: "Мифы о вакцинации",
+          desc: "Разбираем самые распространённые заблуждения о прививках для собак.",
+          icon: "fas fa-comment-dots",
+        },
+        {
+          title: "Реакция на прививку: что нормально, а когда бить тревогу",
+          desc: "Вялость, отказ от еды, аллергия — как отличить норму от осложнений.",
+          icon: "fas fa-thermometer-half",
+        },
+        {
+          title: "Подготовка к вакцинации",
+          desc: "Как подготовить питомца к прививке, чтобы избежать осложнений.",
+          icon: "fas fa-list-check",
+        },
+      ];
+
+      let searchTerm = "";
+
+      function renderArticles() {
+        let filtered = articles;
+        if (searchTerm) {
+          filtered = articles.filter(
+            (article) =>
+              article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+              article.desc.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        }
+
+        const statsInfo = document.getElementById("statsInfo");
+        statsInfo.innerHTML = `Найдено ${filtered.length} статей`;
+
+        const grid = document.getElementById("articlesGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div style="text-align: center; padding: 60px; background: white; border-radius: 24px;">По вашему запросу ничего не найдено.</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map(
+            (article) => `
+            <div class="article-card" data-title="${article.title}">
+                <div class="article-icon"><i class="${article.icon}"></i></div>
+                <div class="article-content">
+                    <h3 class="article-title">${article.title}</h3>
+                    <p class="article-desc">${article.desc}</p>
+                    <div class="read-more" style="margin-top:16px;color:#2563eb;font-weight:700;display:flex;align-items:center;gap:6px;cursor:pointer;">Читать <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        `
+          )
+          .join("");
+
+        // Добавляем обработчики кликов
+        document.querySelectorAll(".article-card").forEach((card) => {
+          const readMoreBtn = card.querySelector(".read-more");
+          const title = card.getAttribute("data-title");
+          if (readMoreBtn) {
+            readMoreBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              openArticleModal(title);
+            });
+          }
+          card.addEventListener("click", () => {
+            openArticleModal(title);
+          });
+        });
+      }
+
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        searchTerm = e.target.value;
+        renderArticles();
+      });
+
+      renderArticles();
+
+      document
+        .querySelector(".btn-login")
+        .addEventListener("click", () => alert("Вход в личный кабинет"));
+      document
+        .querySelector(".notification")
+        .addEventListener("click", () => alert("Уведомления"));
+    </script>
+  </body>
+</html>

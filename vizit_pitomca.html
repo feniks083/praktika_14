@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Подготовка питомца к визиту в ветклинику — Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="vizit_pitomca.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'"/>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_doga.html"
+                  ><i class="fas fa-book-open"></i> Породы собак</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+    </header>
+
+
+    <!-- Hero секция -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Как подготовить питомца<br />к походу в клинику?</h1>
+        <p>
+          Узнайте, как выбрать правильную клинику и подготовиться к визиту,
+          чтобы все прошло гладко
+        </p>
+      </div>
+    </section>
+
+    <!-- 10 советов -->
+    <section class="tips-section">
+      <div class="container">
+        <h2 class="section-title">
+          10 советов как подготовить питомца к визиту
+        </h2>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <div class="tip-number">1</div>
+            <h3>Выберите правильную переноску</h3>
+            <p>
+              Для кошек используйте жесткую переноску, для собак — удобный
+              поводок или переноску под размер.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">2</div>
+            <h3>Приучайте заранее</h3>
+            <p>
+              За несколько дней поставьте переноску в комнате, положите внутрь
+              лакомства, чтобы питомец привык.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">3</div>
+            <h3>Создайте положительные ассоциации</h3>
+            <p>
+              Давайте лакомства во время поездки и после визита, чтобы питомец
+              не боялся.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">4</div>
+            <h3>Не кормите перед поездкой</h3>
+            <p>
+              За 3-4 часа до визита не кормите питомца, особенно если
+              планируются анализы или наркоз.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">5</div>
+            <h3>Возьмите любимую игрушку</h3>
+            <p>
+              Знакомая вещь поможет питомцу чувствовать себя спокойнее в
+              незнакомой обстановке.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">6</div>
+            <h3>Используйте феромоны</h3>
+            <p>
+              Спреи с кошачьими феромонами (Feliway) или собачьими (Adaptil)
+              помогут снизить стресс.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">7</div>
+            <h3>Соберите документы</h3>
+            <p>
+              Возьмите паспорт с прививками, результаты прошлых анализов и
+              список лекарств.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">8</div>
+            <h3>Будьте спокойны сами</h3>
+            <p>
+              Животные чувствуют ваше настроение. Сохраняйте спокойствие и
+              уверенность.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">9</div>
+            <h3>Запишите вопросы</h3>
+            <p>
+              Заранее составьте список вопросов, чтобы ничего не забыть спросить
+              у врача.
+            </p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-number">10</div>
+            <h3>Выберите удобное время</h3>
+            <p>
+              Записывайтесь на утро, когда в клинике меньше посетителей и шума.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Советы для кошек и собак -->
+    <section class="pet-tips-section">
+      <div class="container">
+        <h2 class="section-title">Советы для разных питомцев</h2>
+        <div class="pet-tabs">
+          <button class="tab-btn active" data-pet="cat">🐱 Для кошек</button>
+          <button class="tab-btn" data-pet="dog">🐕 Для собак</button>
+        </div>
+
+        <div id="cat-tips" class="pet-content active">
+          <div class="tips-list">
+            <div class="tip-item">
+              <div class="tip-icon"><i class="fas fa-home"></i></div>
+              <div class="tip-text">
+                <h4>Приучайте к переноске заранее</h4>
+                <p>
+                  Оставьте переноску открытой дома, положите внутрь любимую
+                  подстилку. Кошки должны воспринимать её как безопасное место.
+                </p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-icon"><i class="fas fa-spray-can"></i></div>
+              <div class="tip-text">
+                <h4>Используйте успокаивающие спреи</h4>
+                <p>
+                  За 15 минут до поездки обработайте переноску спреем Feliway —
+                  это снизит тревожность кошки.
+                </p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-icon"><i class="fas fa-blanket"></i></div>
+              <div class="tip-text">
+                <h4>Накройте переноску</h4>
+                <p>
+                  В клинике накройте переноску легкой тканью — кошка будет
+                  чувствовать себя защищённой.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="dog-tips" class="pet-content">
+          <div class="tips-list">
+            <div class="tip-item">
+              <div class="tip-icon"><i class="fas fa-walking"></i></div>
+              <div class="tip-text">
+                <h4>Выгуляйте перед визитом</h4>
+                <p>
+                  Дайте собаке возможность выгуляться и справить нужду перед
+                  поездкой в клинику.
+                </p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-icon"><i class="fas fa-bone"></i></div>
+              <div class="tip-text">
+                <h4>Возьмите лакомства</h4>
+                <p>
+                  Вкусные угощения помогут отвлечь собаку и создать
+                  положительные ассоциации с клиникой.
+                </p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-icon"><i class="fas fa-muzzle"></i></div>
+              <div class="tip-text">
+                <h4>Наденьте намордник</h4>
+                <p>
+                  Даже самая добрая собака может испугаться. Намордник обеспечит
+                  безопасность всех участников.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подготовка к анализам и процедурам -->
+    <section class="procedures-section">
+      <div class="container">
+        <h2 class="section-title">Подготовка к анализам и процедурам</h2>
+        <div class="procedures-grid">
+          <div class="procedure-card">
+            <div class="procedure-icon"><i class="fas fa-tint"></i></div>
+            <h3>Анализ крови</h3>
+            <p>
+              Голодная диета 8-12 часов. Вода доступна всегда. Для кошек —
+              ограничить стресс.
+            </p>
+          </div>
+          <div class="procedure-card">
+            <div class="procedure-icon"><i class="fas fa-flask"></i></div>
+            <h3>Анализ мочи</h3>
+            <p>
+              Соберите утреннюю порцию в стерильный контейнер. Для кошек
+              используйте специальный наполнитель.
+            </p>
+          </div>
+          <div class="procedure-card">
+            <div class="procedure-icon"><i class="fas fa-x-ray"></i></div>
+            <h3>Рентген / УЗИ</h3>
+            <p>
+              Не кормить 6-8 часов. При необходимости — седация. Возьмите
+              подстилку из дома.
+            </p>
+          </div>
+          <div class="procedure-card">
+            <div class="procedure-icon"><i class="fas fa-syringe"></i></div>
+            <h3>Вакцинация</h3>
+            <p>
+              Питомец должен быть здоров. За 10-14 дней проведите
+              дегельминтизацию.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Чек-лист -->
+    <section class="checklist-section">
+      <div class="container">
+        <h2 class="section-title">Чек-лист перед визитом</h2>
+        <div class="checklist-container">
+          <div class="checklist-item" onclick="toggleCheck(this)">
+            <div class="checklist-check"><i class="fas fa-check"></i></div>
+            <span class="checklist-text"
+              >Ветеринарный паспорт с прививками</span
+            >
+          </div>
+          <div class="checklist-item" onclick="toggleCheck(this)">
+            <div class="checklist-check"></div>
+            <span class="checklist-text"
+              >Переноска или удобный поводок/шлейка</span
+            >
+          </div>
+          <div class="checklist-item" onclick="toggleCheck(this)">
+            <div class="checklist-check"></div>
+            <span class="checklist-text">Лакомства для поощрения</span>
+          </div>
+          <div class="checklist-item" onclick="toggleCheck(this)">
+            <div class="checklist-check"></div>
+            <span class="checklist-text">Любимая игрушка или подстилка</span>
+          </div>
+          <div class="checklist-item" onclick="toggleCheck(this)">
+            <div class="checklist-check"></div>
+            <span class="checklist-text">Список вопросов для врача</span>
+          </div>
+          <div class="checklist-item" onclick="toggleCheck(this)">
+            <div class="checklist-check"></div>
+            <span class="checklist-text">Пеленки и влажные салфетки</span>
+          </div>
+          <div class="checklist-item" onclick="toggleCheck(this)">
+            <div class="checklist-check"></div>
+            <span class="checklist-text">Намордник (для собак)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Готовы к визиту?</h2>
+        <p>Запишитесь на консультацию к ветеринару онлайн или в клинике</p>
+        <button class="btn-cta">Записаться к врачу</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Pet Story — Подготовка питомца к визиту в ветклинику</p>
+        <p style="font-size: 0.75rem; margin-top: 12px">
+          Сделайте визит к врачу комфортным для вашего питомца
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Переключение табов для кошек/собак
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          document
+            .querySelectorAll(".pet-content")
+            .forEach((content) => content.classList.remove("active"));
+          if (btn.dataset.pet === "cat") {
+            document.getElementById("cat-tips").classList.add("active");
+          } else {
+            document.getElementById("dog-tips").classList.add("active");
+          }
+        });
+      });
+
+      // Чек-лист
+      function toggleCheck(item) {
+        item.classList.toggle("completed");
+        const checkDiv = item.querySelector(".checklist-check");
+        if (item.classList.contains("completed")) {
+          checkDiv.innerHTML = '<i class="fas fa-check"></i>';
+        } else {
+          checkDiv.innerHTML = "";
+        }
+      }
+
+      // Обработчики
+      document.querySelectorAll(".btn-cta, .btn-primary").forEach((btn) => {
+        btn.addEventListener("click", () =>
+          alert("Демо-версия: запись к ветеринару")
+        );
+      });
+      document
+        .querySelector(".btn-login")
+        .addEventListener("click", () => alert("Вход в личный кабинет"));
+      document
+        .querySelector(".notification")
+        .addEventListener("click", () => alert("Уведомления"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Страхование кошек и собак — Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="straxovanie.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_doga.html"
+                  ><i class="fas fa-book-open"></i> Породы собак</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero секция -->
+    <section class="insurance-hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="price-badge">от 250 ₽/мес</div>
+          <h1>Страхование кошек и собак</h1>
+          <ul class="insurance-features">
+            <li>
+              <i class="fas fa-check-circle"></i> Возмещение расходов в
+              ветклиниках
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Безлимитные
+              онлайн-консультации с ветеринарами
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Компенсация ущерба третьим
+              лицам
+            </li>
+          </ul>
+          <div class="hero-buttons">
+            <button class="btn-primary" id="openInsuranceBtn">Застраховать питомца</button>
+            <button class="btn-outline" id="scrollToDetails">Подробнее о страховке</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="./img/str_dog.webp"
+            alt="Страхование питомцев"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="advantages-section">
+      <div class="container">
+        <h2 class="section-title">Преимущества нашей страховки</h2>
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-clock"></i></div>
+            <h3>Экономия времени</h3>
+            <p>
+              Не нужно искать деньги на лечение — страховая компания возместит
+              расходы
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Защита от неожиданностей</h3>
+            <p>
+              Травмы, болезни, отравления — вы защищены от любых непредвиденных
+              ситуаций
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>Спокойствие владельца</h3>
+            <p>
+              Вы можете выбирать любую ветклинику, мы компенсируем расходы по
+              чекам
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Что покрывает страховка -->
+    <section class="coverage-section" id="coverage-section">
+      <div class="container">
+        <h2 class="section-title">Что покрывает страховка?</h2>
+        <div class="coverage-grid">
+          <div class="coverage-card">
+            <h3><i class="fas fa-hospital-user"></i> Ветеринарные расходы</h3>
+            <ul class="coverage-list">
+              <li>
+                <i class="fas fa-check"></i> Консультация ветеринара и узких
+                специалистов
+              </li>
+              <li><i class="fas fa-check"></i> Неотложные операции</li>
+              <li>
+                <i class="fas fa-check"></i> Диагностика и лабораторные
+                исследования
+              </li>
+              <li><i class="fas fa-check"></i> Капельницы, уколы, перевязки</li>
+              <li>
+                <i class="fas fa-check"></i> Лекарства, прописанные ветеринаром
+              </li>
+              <li><i class="fas fa-check"></i> Стационар (до 2 дней)</li>
+            </ul>
+            <div class="not-covered">
+              <h4><i class="fas fa-ban"></i> Не входит в страховку:</h4>
+              <ul class="coverage-list">
+                <li>
+                  <i class="fas fa-times"></i> Профилактические осмотры и
+                  прививки
+                </li>
+                <li><i class="fas fa-times"></i> Кастрация и стерилизация</li>
+                <li><i class="fas fa-times"></i> Беременность и роды</li>
+              </ul>
+            </div>
+          </div>
+          <div class="coverage-card">
+            <h3><i class="fas fa-gavel"></i> Гражданская ответственность</h3>
+            <ul class="coverage-list">
+              <li>
+                <i class="fas fa-check"></i> Если собака покусала человека
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Если питомец повредил чужое
+                имущество
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Компенсация ущерба третьим лицам
+              </li>
+            </ul>
+            <div class="not-covered" style="margin-top: 30px">
+              <h4><i class="fas fa-info-circle"></i> Условия:</h4>
+              <p style="margin-top: 10px">
+                Страхуются кошки и собаки от 3 месяцев до 8 лет. Полис действует
+                1 год.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Пакеты страхования -->
+    <section class="packages-section">
+      <div class="container">
+        <h2 class="section-title">Выберите пакет страхования</h2>
+        <div class="packages-tabs">
+          <button class="tab-btn active" data-pet="dog">Для собак</button>
+          <button class="tab-btn" data-pet="cat">Для кошек</button>
+        </div>
+        <div class="packages-grid" id="packages-container"></div>
+      </div>
+    </section>
+
+    <!-- Частые вопросы -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Частые вопросы</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              С какими врачами можно проконсультироваться онлайн?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Онлайн-консультации доступны в мобильном приложении Petstory с 6
+              утра до 2 часов ночи. Консультации оказывают дипломированные
+              ветеринары из ведущих клиник России. В зависимости от пакета
+              доступны терапевт, дерматолог, диетолог и зоопсихолог.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              С какого момента начинает действовать полис?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Обратиться за онлайн-консультацией можно уже на следующий день.
+              Компенсировать расходы в ветклинике можно через 3 недели после
+              приобретения полиса.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Можно ли выбрать клинику самостоятельно?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Да, владелец питомца самостоятельно выбирает любую ветклинику в
+              России. Страховая компания возместит убытки по чекам, если
+              покрытие предусмотрено условиями полиса.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Как получить компенсацию? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Достаточно обратиться в страховую компанию в течение суток любым
+              удобным способом и предоставить необходимые документы (чеки,
+              справку от врача).
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Можно ли расторгнуть полис? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Да, вы можете отказаться от полиса в любое время. В течение 14
+              дней после покупки возможен возврат части премии, позже — возврат
+              не производится.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Защитите здоровье своего питомца</h2>
+        <p>Страховой полис — это спокойствие и уверенность в завтрашнем дне</p>
+        <button class="btn-cta" id="ctaInsuranceBtn">Оформить страховку</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2026 Pet Story — сервис онлайн-консультаций с ветеринарами. Все
+          права защищены.
+        </p>
+        <p style="font-size: 0.75rem; margin-top: 12px">
+          Страхование осуществляется при поддержке СК «Ренессанс»
+        </p>
+      </div>
+    </footer>
+
+    <!-- Модальное окно для оформления страховки -->
+    <div class="modal-overlay" id="insuranceModal">
+      <div class="modal-container">
+        <button class="modal-close" id="closeModalBtn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <div class="modal-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h2 id="modalTitle">Оформление страховки</h2>
+          <p id="modalSubtitle">Выберите тариф и заполните данные</p>
+        </div>
+
+        <div class="modal-tabs" id="modalTabs">
+          <button class="modal-tab-btn active" data-modal-pet="dog">
+            <i class="fas fa-dog"></i> Собака
+          </button>
+          <button class="modal-tab-btn" data-modal-pet="cat">
+            <i class="fas fa-cat"></i> Кошка
+          </button>
+        </div>
+
+        <div class="modal-packages" id="modalPackages"></div>
+
+        <form class="modal-form" id="insuranceForm">
+          <div class="form-row">
+            <div class="form-group half">
+              <label>Ваше имя *</label>
+              <input type="text" id="userName" placeholder="Анна" required />
+            </div>
+            <div class="form-group half">
+              <label>Телефон *</label>
+              <input type="tel" id="userPhone" placeholder="+7 (999) 123-45-67" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label>Email *</label>
+              <input type="email" id="userEmail" placeholder="example@mail.com" required />
+            </div>
+            <div class="form-group half">
+              <label>Кличка питомца *</label>
+              <input type="text" id="petName" placeholder="Рекс" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label>Возраст питомца *</label>
+              <input type="text" id="petAge" placeholder="2 года" required />
+            </div>
+            <div class="form-group half">
+              <label>Порода</label>
+              <input type="text" id="petBreed" placeholder="например, Лабрадор" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="agreeTerms" required />
+              <span
+                >Я согласен(на) с
+                <a href="#">условиями страхования</a> и обработкой персональных
+                данных</span
+              >
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-file-signature"></i> Оформить полис
+          </button>
+        </form>
+
+        <div class="modal-success" id="modalSuccess" style="display: none">
+          <i class="fas fa-check-circle"></i>
+          <h3>Заявка отправлена!</h3>
+          <p>
+            Спасибо за доверие! Наш менеджер свяжется с вами в течение 15 минут
+            для оформления полиса.
+          </p>
+          <button class="btn-primary" id="closeSuccessBtn">Хорошо</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Пакеты страхования для отображения в карточках
+      const packages = {
+        dog: [
+          {
+            name: "Базовый",
+            price: "250 ₽/мес",
+            coverage: "до 50 000 ₽",
+            features: [
+              "Компенсация до 50 000 ₽",
+              "Онлайн-терапевт безлимитно",
+              "Гражданская ответственность",
+            ],
+          },
+          {
+            name: "Оптимальный",
+            price: "450 ₽/мес",
+            coverage: "до 100 000 ₽",
+            features: [
+              "Компенсация до 100 000 ₽",
+              "Безлимитные консультации",
+              "1 консультация узкого специалиста",
+            ],
+          },
+          {
+            name: "Премиум",
+            price: "650 ₽/мес",
+            coverage: "до 200 000 ₽",
+            features: [
+              "Компенсация до 200 000 ₽",
+              "Все специалисты безлимитно",
+              "Расширенная ответственность",
+            ],
+          },
+        ],
+        cat: [
+          {
+            name: "Базовый",
+            price: "200 ₽/мес",
+            coverage: "до 40 000 ₽",
+            features: [
+              "Компенсация до 40 000 ₽",
+              "Онлайн-терапевт безлимитно",
+              "Гражданская ответственность",
+            ],
+          },
+          {
+            name: "Оптимальный",
+            price: "380 ₽/мес",
+            coverage: "до 80 000 ₽",
+            features: [
+              "Компенсация до 80 000 ₽",
+              "Безлимитные консультации",
+              "1 консультация узкого специалиста",
+            ],
+          },
+          {
+            name: "Премиум",
+            price: "550 ₽/мес",
+            coverage: "до 150 000 ₽",
+            features: [
+              "Компенсация до 150 000 ₽",
+              "Все специалисты безлимитно",
+              "Расширенная ответственность",
+            ],
+          },
+        ],
+      };
+
+      // Переменные для модального окна
+      let selectedPetType = "dog";
+      let selectedPackage = null;
+
+      // Рендер карточек на странице
+      function renderPackages(petType) {
+        const container = document.getElementById("packages-container");
+        const pkg = packages[petType];
+        container.innerHTML = pkg
+          .map(
+            (p, index) => `
+            <div class="package-card" data-package="${p.name}" data-price="${p.price}" data-pet="${petType}" data-index="${index}">
+                <h3>${p.name}</h3>
+                <div class="package-price">${p.price}</div>
+                <div class="package-coverage">Лимит: ${p.coverage}</div>
+                <ul class="package-features">
+                    ${p.features
+                      .map(
+                        (f) =>
+                          `<li><i class="fas fa-check-circle" style="color:#10b981"></i> ${f}</li>`
+                      )
+                      .join("")}
+                </ul>
+                <button class="btn-buy select-package">Выбрать тариф</button>
+            </div>
+        `
+          )
+          .join("");
+
+        // Добавляем обработчики для кнопок выбора тарифа
+        document.querySelectorAll(".select-package").forEach((btn, idx) => {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const packageData = pkg[idx];
+            openInsuranceModal(petType, packageData);
+          });
+        });
+      }
+
+      // Рендер пакетов в модальном окне
+      function renderModalPackages(petType) {
+        const container = document.getElementById("modalPackages");
+        const pkg = packages[petType];
+        container.innerHTML = pkg
+          .map(
+            (p, index) => `
+            <div class="modal-package-card ${selectedPackage?.name === p.name ? "selected" : ""}" data-modal-package="${p.name}" data-modal-price="${p.price}" data-modal-index="${index}">
+                <div class="modal-package-header">
+                    <h4>${p.name}</h4>
+                    <div class="modal-package-price">${p.price}</div>
+                </div>
+                <div class="modal-package-coverage">Лимит: ${p.coverage}</div>
+                <ul class="modal-package-features">
+                    ${p.features
+                      .map(
+                        (f) =>
+                          `<li><i class="fas fa-check"></i> ${f}</li>`
+                      )
+                      .join("")}
+                </ul>
+            </div>
+        `
+          )
+          .join("");
+
+        // Добавляем обработчики выбора пакета
+        document.querySelectorAll(".modal-package-card").forEach((card, idx) => {
+          card.addEventListener("click", () => {
+            document.querySelectorAll(".modal-package-card").forEach((c) => c.classList.remove("selected"));
+            card.classList.add("selected");
+            selectedPackage = pkg[idx];
+            updateSelectedPackageDisplay();
+          });
+        });
+      }
+
+      function updateSelectedPackageDisplay() {
+        if (selectedPackage) {
+          const selectedInfo = document.getElementById("selectedPackageInfo");
+          if (selectedInfo) {
+            selectedInfo.innerHTML = `<i class="fas fa-check-circle"></i> Выбран тариф: ${selectedPackage.name} — ${selectedPackage.price}`;
+          }
+        }
+      }
+
+      // Открытие модального окна
+      function openInsuranceModal(petType, packageData = null) {
+        selectedPetType = petType;
+        selectedPackage = packageData;
+        
+        const modal = document.getElementById("insuranceModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalSubtitle = document.getElementById("modalSubtitle");
+        
+        modalTitle.textContent = petType === "dog" ? "Страхование собаки" : "Страхование кошки";
+        modalSubtitle.textContent = "Выберите тариф и заполните данные";
+        
+        // Активируем правильную вкладку
+        document.querySelectorAll(".modal-tab-btn").forEach(btn => {
+          btn.classList.remove("active");
+          if ((petType === "dog" && btn.dataset.modalPet === "dog") ||
+              (petType === "cat" && btn.dataset.modalPet === "cat")) {
+            btn.classList.add("active");
+          }
+        });
+        
+        renderModalPackages(petType);
+        
+        // Если передан конкретный пакет, выбираем его
+        if (selectedPackage) {
+          setTimeout(() => {
+            const cards = document.querySelectorAll(".modal-package-card");
+            cards.forEach(card => {
+              if (card.querySelector("h4")?.textContent === selectedPackage.name) {
+                card.classList.add("selected");
+              }
+            });
+          }, 100);
+        }
+        
+        modal.classList.add("active");
+        document.getElementById("insuranceForm").style.display = "block";
+        document.getElementById("modalSuccess").style.display = "none";
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("insuranceModal");
+        modal.classList.remove("active");
+        document.getElementById("insuranceForm").reset();
+        document.getElementById("insuranceForm").style.display = "block";
+        document.getElementById("modalSuccess").style.display = "none";
+        selectedPackage = null;
+      }
+
+      // Обработчики открытия модального окна
+      document.getElementById("openInsuranceBtn").addEventListener("click", () => {
+        openInsuranceModal("dog");
+      });
+      
+      document.getElementById("ctaInsuranceBtn").addEventListener("click", () => {
+        openInsuranceModal("dog");
+      });
+      
+      document.getElementById("closeModalBtn").addEventListener("click", closeModal);
+      
+      // Закрытие по клику на оверлей
+      document.getElementById("insuranceModal").addEventListener("click", (e) => {
+        if (e.target === document.getElementById("insuranceModal")) {
+          closeModal();
+        }
+      });
+      
+      // Переключение вкладок в модальном окне
+      document.querySelectorAll(".modal-tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".modal-tab-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          const petType = btn.dataset.modalPet;
+          selectedPetType = petType;
+          selectedPackage = null;
+          renderModalPackages(petType);
+          
+          const modalTitle = document.getElementById("modalTitle");
+          modalTitle.textContent = petType === "dog" ? "Страхование собаки" : "Страхование кошки";
+        });
+      });
+      
+      // Обработка отправки формы
+      document.getElementById("insuranceForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById("userName").value.trim();
+        const phone = document.getElementById("userPhone").value.trim();
+        const email = document.getElementById("userEmail").value.trim();
+        const petName = document.getElementById("petName").value.trim();
+        const petAge = document.getElementById("petAge").value.trim();
+        const terms = document.getElementById("agreeTerms").checked;
+        
+        if (!name || !phone || !email || !petName || !petAge || !terms) {
+          alert("Пожалуйста, заполните все обязательные поля");
+          return;
+        }
+        
+        if (!selectedPackage) {
+          alert("Пожалуйста, выберите тариф страхования");
+          return;
+        }
+        
+        // Скрываем форму, показываем успех
+        document.getElementById("insuranceForm").style.display = "none";
+        document.getElementById("modalSuccess").style.display = "block";
+        
+        console.log("Заявка на страховку:", {
+          name,
+          phone,
+          email,
+          petType: selectedPetType,
+          petName,
+          petAge,
+          petBreed: document.getElementById("petBreed").value,
+          package: selectedPackage
+        });
+      });
+      
+      document.getElementById("closeSuccessBtn").addEventListener("click", closeModal);
+      
+      // Прокрутка к деталям
+      document.getElementById("scrollToDetails").addEventListener("click", () => {
+        document.getElementById("coverage-section").scrollIntoView({ behavior: "smooth" });
+      });
+      
+      // Табы на странице
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderPackages(btn.dataset.pet);
+        });
+      });
+      renderPackages("dog");
+      
+      // FAQ аккордеон
+      document.querySelectorAll(".faq-question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const answer = q.nextElementSibling;
+          answer.classList.toggle("show");
+        });
+      });
+      
+      // Обработчики уведомлений и входа
+      document.querySelector(".btn-login").addEventListener("click", () => alert("Вход в личный кабинет"));
+      document.querySelector(".notification").addEventListener("click", () => alert("Уведомления"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Уход за питомцем | Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="pravila_yxoda.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'; this.nextSibling.style.display='block';"
+            />
+            <span style="display: none">Pet Story</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к
+                  визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="vibor_doga.html"
+                  ><i class="fas fa-home"></i> Выбор и приобретение</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button
+              class="btn-login"
+              onclick="window.location.href='login.html'"
+            >
+              Войти
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero секция -->
+      <section class="care-hero">
+        <div class="container">
+          <div class="care-hero-content">
+            <h1>Правильный уход — залог здоровья вашего питомца</h1>
+            <p>
+              Кошки или собаки — каждый питомец требует внимания. Скачайте
+              чек-листы и получите практические рекомендации ветеринарных врачей
+              по уходу и гигиене.
+            </p>
+            <div class="hero-badges">
+              <span class="badge"
+                ><i class="fas fa-check-circle"></i> Для собак и кошек</span
+              >
+              <span class="badge"
+                ><i class="fas fa-heart"></i> 1 284 сохранения</span
+              >
+            </div>
+          </div>
+          <div class="care-hero-image">
+            <img
+              src="./img/yxod.jpg"
+              alt="Уход за питомцем"
+              onerror="this.src='https://via.placeholder.com/500x400?text=Уход+за+питомцем'"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Переключатель: кошка / собака -->
+      <section class="pet-selector">
+        <div class="container">
+          <div class="selector-tabs">
+            <button class="selector-tab active" data-pet="cat">
+              <i class="fas fa-cat"></i> Кошки
+            </button>
+            <button class="selector-tab" data-pet="dog">
+              <i class="fas fa-dog"></i> Собаки
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок чек-листов (кошка) -->
+      <section class="checklist-section" id="cat-checklist">
+        <div class="container">
+          <div class="checklist-card">
+            <div class="checklist-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div class="checklist-content">
+              <h2>Чек-лист по уходу за кошками</h2>
+              <p>
+                Чтобы получить чек-лист — нужно зарегистрироваться. Он придёт
+                вам на почту.
+              </p>
+              <form class="checklist-form" data-type="cat">
+                <input type="email" placeholder="Ваш email" required />
+                <button type="submit" class="btn-primary">
+                  Получить чек-лист <i class="fas fa-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок чек-листов (собака) -->
+      <section
+        class="checklist-section"
+        id="dog-checklist"
+        style="display: none"
+      >
+        <div class="container">
+          <div class="checklist-card">
+            <div class="checklist-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div class="checklist-content">
+              <h2>Чек-лист по уходу за собаками</h2>
+              <p>
+                Чтобы получить чек-лист — нужно зарегистрироваться. Он придёт
+                вам на почту.
+              </p>
+              <form class="checklist-form" data-type="dog">
+                <input type="email" placeholder="Ваш email" required />
+                <button type="submit" class="btn-primary">
+                  Получить чек-лист <i class="fas fa-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок статей по уходу -->
+      <section class="articles-section">
+        <div class="container">
+          <h2 class="section-title">Читайте подборку статей по уходу</h2>
+
+          <!-- Статьи для кошек -->
+          <div id="cat-articles" class="articles-grid-care">
+            <div class="care-article-card" data-article="cat-fur">
+              <div class="care-article-icon"><i class="fas fa-brush"></i></div>
+              <h3>Уход за шерстью кошки</h3>
+              <p>
+                Как правильно вычёсывать, купать и ухаживать за шерстью кошки в
+                зависимости от типа и длины.
+              </p>
+              <a href="#" class="read-more"
+                >Читать статью <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+            <div class="care-article-card" data-article="cat-claws-ears">
+              <div class="care-article-icon"><i class="fas fa-cut"></i></div>
+              <h3>Уход за когтями и ушами кошки</h3>
+              <p>
+                Стрижка когтей, чистка ушей: как делать правильно и как часто.
+              </p>
+              <a href="#" class="read-more"
+                >Читать статью <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+            <div class="care-article-card" data-article="cat-teeth">
+              <div class="care-article-icon"><i class="fas fa-tooth"></i></div>
+              <h3>Уход за зубами кошки</h3>
+              <p>
+                Как приучить к чистке зубов и предотвратить стоматологические
+                проблемы.
+              </p>
+              <a href="#" class="read-more"
+                >Читать статью <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Статьи для собак -->
+          <div
+            id="dog-articles"
+            class="articles-grid-care"
+            style="display: none"
+          >
+            <div class="care-article-card" data-article="dog-fur">
+              <div class="care-article-icon"><i class="fas fa-brush"></i></div>
+              <h3>Уход за шерстью собаки</h3>
+              <p>
+                Особенности вычёсывания, купания и ухода в зависимости от породы
+                и типа шерсти.
+              </p>
+              <a href="#" class="read-more"
+                >Читать статью <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+            <div class="care-article-card" data-article="dog-claws-ears">
+              <div class="care-article-icon"><i class="fas fa-cut"></i></div>
+              <h3>Стрижка когтей и чистка ушей</h3>
+              <p>
+                Как правильно стричь когти собаке и чистить уши без стресса для
+                питомца.
+              </p>
+              <a href="#" class="read-more"
+                >Читать статью <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+            <div class="care-article-card" data-article="dog-teeth">
+              <div class="care-article-icon"><i class="fas fa-bone"></i></div>
+              <h3>Гигиена полости рта</h3>
+              <p>
+                Зубной камень, налёт и чистка зубов: как сохранить зубы собаки
+                здоровыми.
+              </p>
+              <a href="#" class="read-more"
+                >Читать статью <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок "Позаботьтесь о питомце заранее" -->
+      <section class="services-preview">
+        <div class="container">
+          <h2 class="section-title">Позаботьтесь о питомце заранее</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-video"></i></div>
+              <h3>Онлайн-консультация с ветеринаром</h3>
+              <p>Терапевт уже ждет вас!</p>
+              <div class="service-price">от 649 ₽</div>
+              <button
+                class="btn-outline"
+                onclick="window.location.href='televet.html'"
+              >
+                Записаться <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Страховка для питомца</h3>
+              <p>Безлимитные консультации и возмещение расходов на лечение</p>
+              <div class="service-price">от 458 ₽ / мес.</div>
+              <button
+                class="btn-outline"
+                onclick="window.location.href='straxovanie.html'"
+              >
+                Оформить <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Баннер подбора корма -->
+      <section class="food-finder-banner">
+        <div class="container">
+          <div class="food-finder-card">
+            <div class="food-finder-text">
+              <i class="fas fa-paw"></i>
+              <h3>Какой корм подходит вашему питомцу?</h3>
+              <p>
+                Получите рекомендации по подбору корма. Они подобраны
+                индивидуально для вашего питомца бесплатно.
+              </p>
+              <button
+                class="btn-primary"
+                onclick="window.location.href='korm.html'"
+              >
+                Подобрать корм
+              </button>
+            </div>
+            <div class="food-finder-image">
+              <img
+                src="./img/korm.webp"
+                alt="Корм для питомца"
+                onerror="this.src='https://via.placeholder.com/200x150?text=Корм'"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2026 Pet Story — сервис онлайн-консультаций с ветеринарами. Все
+          права защищены.
+        </p>
+        <p class="footer-note">
+          Информация не заменяет очный визит к врачу. При острых состояниях
+          обращайтесь в клинику.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Модальное окно для статей -->
+    <div class="modal-overlay" id="articleModal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h2 id="modalTitle">Заголовок статьи</h2>
+          <button class="modal-close" id="closeModalBtn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Сюда будет подставляться содержимое статьи -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ========== КОНТЕНТ СТАТЕЙ ==========
+      const articlesContent = {
+        // Статьи для кошек
+        "cat-fur": {
+          title: "Уход за шерстью кошки",
+          icon: "fa-brush",
+          content: `
+          <div class="article-icon"><i class="fas fa-brush"></i></div>
+          <p>Шерсть кошки — это не просто украшение, а важный индикатор здоровья. Густая, блестящая шубка говорит о том, что питомец здоров и получает правильное питание. А тусклая, взъерошенная шерсть может сигнализировать о проблемах.</p>
+          
+          <h3>Почему важен регулярный уход за шерстью?</h3>
+          <p>Регулярное вычёсывание помогает удалить отмершие волоски, предотвращает образование колтунов, стимулирует кровообращение и распределяет естественный кожный жир по всей длине шерсти. Кроме того, это отличный способ укрепить связь с питомцем и вовремя заметить возможные проблемы: кожные высыпания, паразитов или ранки.</p>
+          
+          <h3>Как часто нужно вычёсывать кошку?</h3>
+          <p>Частота зависит от длины и типа шерсти:</p>
+          <ul>
+            <li><strong>Короткошёрстные кошки</strong> (британцы, русские голубые) — 1-2 раза в неделю достаточно.</li>
+            <li><strong>Длинношёрстные породы</strong> (персидские, мейн-куны) — ежедневное вычёсывание обязательно для предотвращения колтунов.</li>
+            <li><strong>В период линьки</strong> — частоту стоит увеличить до ежедневной, особенно весной и осенью.</li>
+          </ul>
+          
+          <h3>Какие инструменты понадобятся?</h3>
+          <ul>
+            <li><strong>Гребень с частыми и редкими зубьями</strong> — для расчёсывания и удаления колтунов.</li>
+            <li><strong>Пуходёрка (сликер)</strong> — для вычёсывания подшёрстка.</li>
+            <li><strong>Фурминатор</strong> — для удаления отмершего подшёрстка (используйте с осторожностью).</li>
+            <li><strong>Колтунорез</strong> — для безопасного удаления сбившихся комков шерсти.</li>
+          </ul>
+          
+          <h3>Как правильно купать кошку?</h3>
+          <p>Кошки — чистоплотные животные, и большинство из них не нуждаются в частом купании. Достаточно мыть питомца 1-2 раза в год или по мере загрязнения. Используйте специальные шампуни для кошек, температура воды — 37-38°C. Перед купанием обязательно расчешите кошку.</p>
+          
+          <h3>Питание и здоровье шерсти</h3>
+          <p>Для блестящей и здоровой шубки в рационе кошки должны присутствовать омега-3 и омега-6 жирные кислоты, биотин, витамины группы B, цинк и медь. При кормлении качественными промышленными кормами премиум-класса дополнительные добавки обычно не требуются.</p>
+        `,
+        },
+        "cat-claws-ears": {
+          title: "Уход за когтями и ушами кошки",
+          icon: "fa-cut",
+          content: `
+          <div class="article-icon"><i class="fas fa-cut"></i></div>
+          <p>Уход за когтями и ушами — важная часть гигиены кошки. Регулярные процедуры помогают предотвратить заболевания, дискомфорт и повреждения мебели.</p>
+          
+          <h3>Зачем нужно стричь когти?</h3>
+          <p>В домашних условиях кошки не могут стачивать когти естественным образом. Отрастая, когти могут впиваться в подушечки лап, вызывая боль и воспаление, цепляться за ковры и мебель, а также травмировать вас во время игр.</p>
+          
+          <h3>Как часто стричь когти?</h3>
+          <p>Оптимальная частота — раз в 2-3 недели. Проверяйте состояние когтей: если слышен стук по полу при ходьбе или когти цепляются за ткани — пора стричь.</p>
+          
+          <h3>Техника безопасной стрижки</h3>
+          <ul>
+            <li>Используйте специальный когтерез-гильотину или когтерезку-секатор.</li>
+            <li>Зафиксируйте кошку в удобном положении, действуйте спокойно.</li>
+            <li>Срезайте только прозрачный кончик, не задевая розовую часть (пульпу).</li>
+            <li>При случайном повреждении обработайте ранку перекисью водорода.</li>
+          </ul>
+          
+          <h3>Уход за ушами</h3>
+          <p>Чистите уши кошки раз в 1-2 недели. Используйте специальный лосьон и ватные диски. Не используйте ватные палочки — они могут травмировать слуховой проход. Здоровое ухо должно быть розовым, без неприятного запаха и выделений. При покраснении, сильном загрязнении или запахе обратитесь к ветеринару.</p>
+        `,
+        },
+        "cat-teeth": {
+          title: "Уход за зубами кошки",
+          icon: "fa-tooth",
+          content: `
+          <div class="article-icon"><i class="fas fa-tooth"></i></div>
+          <p>Стоматологические проблемы — одна из самых частых причин обращения к ветеринару. Зубной камень, гингивит и кариес могут привести к серьёзным заболеваниям внутренних органов.</p>
+          
+          <h3>Как часто нужно чистить зубы?</h3>
+          <p>Идеально — ежедневно, но достаточно 2-3 раз в неделю. Начинайте приучать котёнка к чистке с раннего возраста, тогда процедура будет проходить спокойно.</p>
+          
+          <h3>Что понадобится?</h3>
+          <ul>
+            <li><strong>Специальная зубная щётка для кошек</strong> (или насадка на палец)</li>
+            <li><strong>Ветеринарная зубная паста</strong> — нельзя использовать человеческую, она токсична для кошек</li>
+            <li><strong>Зубные салфетки</strong> — для быстрой очистки</li>
+          </ul>
+          
+          <h3>Как правильно чистить зубы?</h3>
+          <p>Нанесите немного пасты на щётку, аккуратно приподнимите губу и чистите круговыми движениями. Уделите внимание внешней поверхности зубов, особенно задним — там чаще всего образуется налёт. Поощряйте питомца лакомством после процедуры.</p>
+          
+          <h3>Дополнительные средства</h3>
+          <p>Специальные игрушки и лакомства для жевания, а также добавки в воду помогают замедлить образование зубного камня. Раз в год рекомендуется профессиональная чистка у ветеринара.</p>
+        `,
+        },
+        // Статьи для собак
+        "dog-fur": {
+          title: "Уход за шерстью собаки",
+          icon: "fa-brush",
+          content: `
+          <div class="article-icon"><i class="fas fa-brush"></i></div>
+          <p>Уход за шерстью собаки зависит от её породы и типа шерсти. Правильный уход не только сохраняет красивый внешний вид, но и поддерживает здоровье кожи.</p>
+          
+          <h3>Как часто вычёсывать?</h3>
+          <ul>
+            <li><strong>Короткошёрстные</strong> (доберманы, бигли) — 1 раз в неделю резиновой щёткой.</li>
+            <li><strong>Среднешёрстные</strong> (лабрадоры, хаски) — 2-3 раза в неделю, в период линьки — ежедневно.</li>
+            <li><strong>Длинношёрстные</strong> (колли, йорки) — ежедневное вычёсывание обязательно.</li>
+            <li><strong>Жесткошёрстные</strong> (терьеры, шнауцеры) — требуют тримминга (щипки) 2-3 раза в год.</li>
+          </ul>
+          
+          <h3>Купание</h3>
+          <p>Купать собаку достаточно 1 раз в 1-2 месяца или по мере загрязнения. Используйте специальные шампуни для собак. После прогулок мойте только лапы и живот. Частое купание может нарушить защитный слой кожи.</p>
+          
+          <h3>Инструменты для ухода</h3>
+          <ul>
+            <li>Гребень с частыми и редкими зубьями</li>
+            <li>Пуходёрка и фурминатор (для подшёрстка)</li>
+            <li>Колтунорез (для длинношёрстных)</li>
+            <li>Резиновая щётка-массажёр</li>
+          </ul>
+        `,
+        },
+        "dog-claws-ears": {
+          title: "Стрижка когтей и чистка ушей у собаки",
+          icon: "fa-cut",
+          content: `
+          <div class="article-icon"><i class="fas fa-cut"></i></div>
+          <p>Регулярный уход за когтями и ушами — обязательная процедура для здоровья и комфорта вашей собаки.</p>
+          
+          <h3>Как часто стричь когти?</h3>
+          <p>Частота зависит от образа жизни: активные собаки, которые много гуляют по асфальту, могут стачивать когти естественно. В среднем — раз в 2-4 недели. Если слышен стук по полу — пора стричь.</p>
+          
+          <h3>Техника стрижки</h3>
+          <p>Используйте гильотинный когтерез или секатор для крупных пород. Срезайте только кончик, не задевая розовую пульпу. У собак со светлыми когтями пульпа видна, у темных — срезайте понемногу, ориентируясь на срез. Приготовьте кровоостанавливающий порошок на случай повреждения.</p>
+          
+          <h3>Чистка ушей</h3>
+          <p>Чистите уши раз в 1-2 недели специальным лосьоном и ватным диском. Не используйте ватные палочки — они могут травмировать ухо. Уши пород с висячими ушами (бассет-хаунды, спаниели) требуют более частого внимания из-за плохой вентиляции. При покраснении, неприятном запахе или обильных выделениях обратитесь к ветеринару.</p>
+        `,
+        },
+        "dog-teeth": {
+          title: "Гигиена полости рта собаки",
+          icon: "fa-bone",
+          content: `
+          <div class="article-icon"><i class="fas fa-bone"></i></div>
+          <p>Здоровые зубы — залог долголетия собаки. Зубной камень и заболевания дёсен могут привести к потере зубов и серьёзным проблемам с сердцем и почками.</p>
+          
+          <h3>Как часто чистить зубы?</h3>
+          <p>Оптимально — ежедневно, но достаточно 2-3 раз в неделю. Начинайте приучать щенка с 3-4 месяцев. Используйте только специальные ветеринарные пасты — они безопасны при проглатывании.</p>
+          
+          <h3>Что использовать?</h3>
+          <ul>
+            <li>Зубная щётка для собак (обычная или насадка на палец)</li>
+            <li>Ветеринарная зубная паста (вкусы мяса, птицы, рыбы)</li>
+            <li>Зубные салфетки — для быстрой очистки</li>
+            <li>Спреи для свежести дыхания</li>
+          </ul>
+          
+          <h3>Дополнительные средства</h3>
+          <p>Специальные косточки и игрушки для жевания помогают механически очищать зубы. Также существуют добавки в воду для замедления образования зубного камня. Раз в год рекомендуется профессиональная чистка у ветеринара.</p>
+          
+          <h3>Признаки проблем с зубами</h3>
+          <p>Неприятный запах изо рта, покраснение дёсен, налёт или камень, отказ от еды, слюнотечение — повод срочно обратиться к ветеринару-стоматологу.</p>
+        `,
+        },
+      };
+
+      // DOM элементы
+      const modal = document.getElementById("articleModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalBody = document.getElementById("modalBody");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+
+      // Функция открытия модального окна
+      function openArticleModal(articleKey) {
+        const article = articlesContent[articleKey];
+        if (article) {
+          modalTitle.textContent = article.title;
+          modalBody.innerHTML = article.content;
+          modal.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+      }
+
+      // Закрытие модального окна
+      function closeModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      // Обработчики для всех кнопок "Читать статью"
+      document.querySelectorAll(".care-article-card").forEach((card) => {
+        const readMoreBtn = card.querySelector(".read-more");
+        const articleKey = card.getAttribute("data-article");
+        if (readMoreBtn && articleKey) {
+          readMoreBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            openArticleModal(articleKey);
+          });
+        }
+      });
+
+      // Закрытие по кнопке
+      closeModalBtn.addEventListener("click", closeModal);
+
+      // Закрытие по клику на оверлей
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Переключение между кошками и собаками
+      const catChecklist = document.getElementById("cat-checklist");
+      const dogChecklist = document.getElementById("dog-checklist");
+      const catArticles = document.getElementById("cat-articles");
+      const dogArticles = document.getElementById("dog-articles");
+      const tabs = document.querySelectorAll(".selector-tab");
+
+      function switchToPet(pet) {
+        if (pet === "cat") {
+          catChecklist.style.display = "block";
+          dogChecklist.style.display = "none";
+          catArticles.style.display = "grid";
+          dogArticles.style.display = "none";
+          tabs.forEach((tab) => {
+            if (tab.getAttribute("data-pet") === "cat") {
+              tab.classList.add("active");
+            } else {
+              tab.classList.remove("active");
+            }
+          });
+        } else {
+          catChecklist.style.display = "none";
+          dogChecklist.style.display = "block";
+          catArticles.style.display = "none";
+          dogArticles.style.display = "grid";
+          tabs.forEach((tab) => {
+            if (tab.getAttribute("data-pet") === "dog") {
+              tab.classList.add("active");
+            } else {
+              tab.classList.remove("active");
+            }
+          });
+        }
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const pet = tab.getAttribute("data-pet");
+          switchToPet(pet);
+        });
+      });
+
+      // Обработчики форм чек-листов
+      document.querySelectorAll(".checklist-form").forEach((form) => {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const petType =
+            form.getAttribute("data-type") === "cat" ? "кошкам" : "собакам";
+          alert(
+            `✨ Демо-версия: чек-лист по уходу за ${petType} отправлен на указанный email`
+          );
+        });
+      });
+
+      // Обработчики для уведомлений и входа
+      document.querySelectorAll(".btn-login, .notification").forEach((el) => {
+        el.addEventListener("click", () =>
+          alert("Демо-версия: вход в личный кабинет")
+        );
+      });
+
+      // Проверка авторизации
+      function checkAuth() {
+        const user =
+          localStorage.getItem("petstory_user") ||
+          sessionStorage.getItem("petstory_user");
+        const btnLogin = document.querySelector(".btn-login");
+        if (user && btnLogin) {
+          const userData = JSON.parse(user);
+          btnLogin.innerHTML = `<i class="fas fa-user-circle"></i> ${userData.name}`;
+          btnLogin.onclick = () => {
+            if (confirm("Выйти из аккаунта?")) {
+              localStorage.removeItem("petstory_user");
+              sessionStorage.removeItem("petstory_user");
+              location.reload();
+            }
+          };
+        }
+      }
+      checkAuth();
+    </script>
+  </body>
+</html>

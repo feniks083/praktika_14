@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Ветеринар онлайн — Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="televet.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'; this.nextSibling.style.display='block';"
+            />
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html" class="active"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к
+                  визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_doga.html"
+                  ><i class="fas fa-book-open"></i> Породы собак</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Страница ветеринарной консультации -->
+    <main>
+      <section class="televet-hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h1>Онлайн-консультации<br />с ветеринарами</h1>
+            <p class="hero-description">
+              Быстрая помощь опытных врачей. Чат, аудио или видео — где и когда
+              удобно.
+            </p>
+            <div class="hero-buttons">
+              <button class="btn-primary" id="openConsultNowBtn">
+                <i class="fas fa-comment-medical"></i> Получить консультацию
+              </button>
+              <button class="btn-secondary" id="openScheduleBtn">
+                <i class="fas fa-calendar-alt"></i> Записаться по расписанию
+              </button>
+            </div>
+            <div class="hero-features">
+              <span><i class="fas fa-clock"></i> 24/7</span>
+              <span><i class="fas fa-user-md"></i> Опытные врачи</span>
+              <span><i class="fas fa-undo-alt"></i> Возврат денег</span>
+            </div>
+          </div>
+          <div class="hero-image-right">
+            <img
+              src="./img/vet.webp"
+              alt="Ветеринар онлайн консультация"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="services" style="padding: 40px 0 60px">
+        <div class="container">
+          <h2 class="section-title">С чем поможет врач?</h2>
+          <div class="problems-grid">
+            <div class="problem-card" data-problem="Проблемы с пищеварением">
+              <i class="fas fa-stomach"></i><span>Проблемы с пищеварением</span>
+            </div>
+            <div class="problem-card" data-problem="Проблемы с мочеиспусканием">
+              <i class="fas fa-toilet"></i
+              ><span>Проблемы с мочеиспусканием</span>
+            </div>
+            <div class="problem-card" data-problem="Кожные заболевания">
+              <i class="fas fa-allergies"></i><span>Кожные заболевания</span>
+            </div>
+            <div class="problem-card" data-problem="Поведение и тревожность">
+              <i class="fas fa-brain"></i><span>Поведение и тревожность</span>
+            </div>
+            <div class="problem-card" data-problem="Другой вопрос">
+              <i class="fas fa-heartbeat"></i><span>Другой вопрос</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="advantages-section"
+        style="padding: 60px 0; background: #f9fafb"
+      >
+        <div class="container">
+          <h2 class="section-title">Преимущества онлайн-консультаций</h2>
+          <div class="advantages-grid">
+            <div class="advantage-card">
+              <div class="advantage-icon"><i class="fas fa-coins"></i></div>
+              <h3>Экономия времени и денег</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Онлайн дешевле и быстрее похода в
+                  клинику
+                </li>
+                <li><i class="fas fa-check"></i> Без поездок и очередей</li>
+                <li>
+                  <i class="fas fa-check"></i> Если не поможем — вернём деньги
+                </li>
+              </ul>
+            </div>
+            <div class="advantage-card">
+              <div class="advantage-icon"><i class="fas fa-user-md"></i></div>
+              <h3>Ответы от опытных ветеринаров</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Врачи из ведущих клиник России
+                </li>
+                <li><i class="fas fa-check"></i> Стаж — в среднем 11 лет</li>
+                <li><i class="fas fa-check"></i> Средняя оценка — 4.9 из 5</li>
+              </ul>
+            </div>
+            <div class="advantage-card">
+              <div class="advantage-icon"><i class="fas fa-ambulance"></i></div>
+              <h3>Помощь в экстренных ситуациях</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Ответим в течение 5 минут</li>
+                <li>
+                  <i class="fas fa-check"></i> Оценим состояние и дадим чёткий
+                  план
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Подскажем, что делать дальше
+                </li>
+              </ul>
+            </div>
+            <div class="advantage-card">
+              <div class="advantage-icon"><i class="fas fa-file-alt"></i></div>
+              <h3>Второе мнение и разбор анализов</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Объясним, как принимать препараты
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Поможем расшифровать анализы
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Составим план ухода за питомцем
+                </li>
+              </ul>
+            </div>
+            <div class="advantage-card">
+              <div class="advantage-icon"><i class="fas fa-globe"></i></div>
+              <h3>Консультация где и когда удобно</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Связь с врачом — из любого места
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Доступны с 6 утра до 2 ночи по
+                  Москве
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Поможем, даже если рядом нет
+                  клиники
+                </li>
+              </ul>
+            </div>
+            <div class="advantage-card">
+              <div class="advantage-icon"><i class="fas fa-comments"></i></div>
+              <h3>Удобный формат общения</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Чат, аудио или видео</li>
+                <li>
+                  <i class="fas fa-check"></i> Через приложение или на сайте
+                </li>
+                <li><i class="fas fa-check"></i> Прямо сейчас или по записи</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="specialists-section" style="padding: 60px 0">
+        <div class="container">
+          <h2 class="section-title">
+            Онлайн-консультации<br />с ветеринарами по записи
+          </h2>
+          <div class="specialists-grid">
+            <div class="specialist-card" data-specialist="Терапевт">
+              <div class="specialist-icon">
+                <i class="fas fa-stethoscope"></i>
+              </div>
+              <h4>Терапевт</h4>
+              <p>Специалист общего профиля</p>
+              <button class="btn-specialist">Записаться</button>
+            </div>
+            <div class="specialist-card" data-specialist="Диетолог">
+              <div class="specialist-icon"><i class="fas fa-utensils"></i></div>
+              <h4>Диетолог</h4>
+              <p>Проблемы ЖКТ</p>
+              <button class="btn-specialist">Записаться</button>
+            </div>
+            <div class="specialist-card" data-specialist="Дерматолог">
+              <div class="specialist-icon">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <h4>Дерматолог</h4>
+              <p>Кожные заболевания</p>
+              <button class="btn-specialist">Записаться</button>
+            </div>
+            <div class="specialist-card" data-specialist="Зоопсихолог">
+              <div class="specialist-icon"><i class="fas fa-brain"></i></div>
+              <h4>Зоопсихолог</h4>
+              <p>Коррекция поведения</p>
+              <button class="btn-specialist">Записаться</button>
+            </div>
+            <div class="specialist-card" data-specialist="Хирург">
+              <div class="specialist-icon"><i class="fas fa-bone"></i></div>
+              <h4>Хирург</h4>
+              <p>Расшифровка рентгеновских снимков</p>
+              <button class="btn-specialist">Записаться</button>
+            </div>
+            <div class="specialist-card" data-specialist="Офтальмолог">
+              <div class="specialist-icon"><i class="fas fa-eye"></i></div>
+              <h4>Офтальмолог</h4>
+              <p>Проблемы с глазами</p>
+              <button class="btn-specialist">Записаться</button>
+            </div>
+            <div class="specialist-card" data-specialist="Эндокринолог">
+              <div class="specialist-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4>Эндокринолог</h4>
+              <p>Гормональные нарушения</p>
+              <button class="btn-specialist">Записаться</button>
+            </div>
+            <div class="specialist-card" data-specialist="Кинолог">
+              <div class="specialist-icon"><i class="fas fa-dog"></i></div>
+              <h4>Кинолог</h4>
+              <p>Воспитание собак</p>
+              <button class="btn-specialist">Записаться</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="reviews-section"
+        style="padding: 60px 0; background: #f9fafb"
+      >
+        <div class="container">
+          <h2 class="section-title">Реальные истории владельцев</h2>
+          <div class="reviews-grid">
+            <div class="review-card">
+              <i class="fas fa-quote-left"></i>
+              <p class="review-text">
+                Это без преувеличения очень удобно и позволяет сэкономить кучу
+                нервов, времени и денег. Врач ответил в течение 1 минуты,
+                общение происходило оперативно.
+              </p>
+              <div class="review-author">
+                <i class="fas fa-cat"></i><span>@corgosha</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <i class="fas fa-quote-left"></i>
+              <p class="review-text">
+                Сервис 21 века, скинула анализы через приложение,
+                ветеринар-эндокринолог дала ответ и по видеосвязи, и на почту
+                отправила.
+              </p>
+              <div class="review-author">
+                <i class="fas fa-dog"></i><span>@spiraaaaaa</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <i class="fas fa-quote-left"></i>
+              <p class="review-text">
+                В этот раз совершенно случайно открыла для себя приложение
+                Petstory и была в абсолютном восторге. Очень приветливые доктора
+                по видеосвязи выслушают тревоги и успокоят.
+              </p>
+              <div class="review-author">
+                <i class="fas fa-heart"></i><span>@city_bird</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <h2>Не откладывайте заботу о здоровье питомца</h2>
+          <p>Получите квалифицированную помощь ветеринара уже сегодня</p>
+          <button class="btn-cta" id="ctaConsultBtn">
+            <i class="fas fa-calendar-check"></i> Начать консультацию
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2026 Pet Story — сервис онлайн-консультаций с ветеринарами. Все
+          права защищены.
+        </p>
+        <p class="footer-note">
+          Информация не заменяет очный визит к врачу. При острых состояниях
+          обращайтесь в клинику.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Модальное окно для записи на консультацию -->
+    <div class="modal-overlay" id="consultModal">
+      <div class="modal-container">
+        <button class="modal-close" id="closeModalBtn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <div class="modal-icon">
+            <i class="fas fa-paw"></i>
+          </div>
+          <h2 id="modalTitle">Запись на консультацию</h2>
+          <p id="modalSubtitle">Заполните форму, и мы свяжемся с вами</p>
+        </div>
+        
+        <form class="modal-form" id="consultForm">
+          <div class="form-group">
+            <label>Ваше имя *</label>
+            <input type="text" id="userName" placeholder="Анна" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Телефон *</label>
+            <input type="tel" id="userPhone" placeholder="+7 (999) 123-45-67" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" id="userEmail" placeholder="example@mail.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Тип консультации *</label>
+            <select id="consultType">
+              <option value="online">Онлайн-консультация (чат/видео)</option>
+              <option value="schedule">Консультация по расписанию</option>
+            </select>
+          </div>
+          
+          <div class="form-group" id="dateTimeGroup" style="display: none;">
+            <label>Дата и время *</label>
+            <input type="datetime-local" id="consultDateTime">
+          </div>
+          
+          <div class="form-group">
+            <label>Питомец</label>
+            <div class="pet-info">
+              <select id="petType">
+                <option value="">Выберите тип питомца</option>
+                <option value="dog">Собака</option>
+                <option value="cat">Кошка</option>
+                <option value="other">Другой питомец</option>
+              </select>
+              <input type="text" id="petName" placeholder="Кличка питомца">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Описание проблемы</label>
+            <textarea id="problemDesc" rows="3" placeholder="Опишите, что беспокоит вашего питомца..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="agreeTerms" required>
+              <span>Я согласен(на) с <a href="#">условиями обработки персональных данных</a></span>
+            </label>
+          </div>
+          
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-calendar-check"></i> Записаться
+          </button>
+        </form>
+        
+        <div class="modal-success" id="modalSuccess" style="display: none;">
+          <i class="fas fa-check-circle"></i>
+          <h3>Заявка отправлена!</h3>
+          <p>Мы свяжемся с вами в ближайшее время для подтверждения записи.</p>
+          <button class="btn-primary" id="closeSuccessBtn">Хорошо</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Получаем элементы модального окна
+      const modal = document.getElementById('consultModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const consultForm = document.getElementById('consultForm');
+      const modalSuccess = document.getElementById('modalSuccess');
+      const consultType = document.getElementById('consultType');
+      const dateTimeGroup = document.getElementById('dateTimeGroup');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalSubtitle = document.getElementById('modalSubtitle');
+
+      let currentConsultType = 'online';
+
+      // Функция открытия модального окна
+      function openModal(type, specialist = null, problem = null) {
+        modal.classList.add('active');
+        modalSuccess.style.display = 'none';
+        consultForm.style.display = 'block';
+        
+        if (type === 'schedule') {
+          currentConsultType = 'schedule';
+          consultType.value = 'schedule';
+          dateTimeGroup.style.display = 'block';
+          modalTitle.textContent = 'Запись по расписанию';
+          modalSubtitle.textContent = 'Выберите удобное время для консультации';
+        } else {
+          currentConsultType = 'online';
+          consultType.value = 'online';
+          dateTimeGroup.style.display = 'none';
+          modalTitle.textContent = 'Онлайн-консультация';
+          modalSubtitle.textContent = 'Заполните форму, и врач свяжется с вами в течение 5 минут';
+        }
+        
+        // Если передан специалист, заполняем поле описания
+        if (specialist) {
+          const problemDesc = document.getElementById('problemDesc');
+          problemDesc.value = `Запись к специалисту: ${specialist}`;
+        }
+        
+        // Если передана проблема, заполняем поле описания
+        if (problem) {
+          const problemDesc = document.getElementById('problemDesc');
+          problemDesc.value = `Вопрос по проблеме: ${problem}`;
+        }
+      }
+
+      // Функция закрытия модального окна
+      function closeModal() {
+        modal.classList.remove('active');
+        consultForm.reset();
+        consultForm.style.display = 'block';
+        modalSuccess.style.display = 'none';
+        dateTimeGroup.style.display = 'none';
+      }
+
+      // Обработчики кнопок открытия
+      document.getElementById('openConsultNowBtn').addEventListener('click', () => {
+        openModal('online');
+      });
+      
+      document.getElementById('openScheduleBtn').addEventListener('click', () => {
+        openModal('schedule');
+      });
+      
+      document.getElementById('ctaConsultBtn').addEventListener('click', () => {
+        openModal('online');
+      });
+      
+      // Обработчики карточек проблем
+      document.querySelectorAll('.problem-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          const problem = card.getAttribute('data-problem');
+          openModal('online', null, problem);
+        });
+      });
+      
+      // Обработчики карточек специалистов
+      document.querySelectorAll('.specialist-card').forEach(card => {
+        const btn = card.querySelector('.btn-specialist');
+        const specialist = card.getAttribute('data-specialist');
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          openModal('schedule', specialist, null);
+        });
+      });
+      
+      // Закрытие модального окна
+      closeModalBtn.addEventListener('click', closeModal);
+      
+      // Закрытие по клику на оверлей
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+      
+      // Переключение типа консультации
+      consultType.addEventListener('change', (e) => {
+        if (e.target.value === 'schedule') {
+          dateTimeGroup.style.display = 'block';
+        } else {
+          dateTimeGroup.style.display = 'none';
+        }
+      });
+      
+      // Обработка отправки формы
+      consultForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Простая валидация
+        const name = document.getElementById('userName').value.trim();
+        const phone = document.getElementById('userPhone').value.trim();
+        const email = document.getElementById('userEmail').value.trim();
+        const terms = document.getElementById('agreeTerms').checked;
+        
+        if (!name || !phone || !email || !terms) {
+          alert('Пожалуйста, заполните все обязательные поля');
+          return;
+        }
+        
+        // Скрываем форму, показываем успех
+        consultForm.style.display = 'none';
+        modalSuccess.style.display = 'block';
+        
+        // Имитация отправки данных
+        console.log('Заявка отправлена:', {
+          name,
+          phone,
+          email,
+          type: consultType.value,
+          dateTime: document.getElementById('consultDateTime').value,
+          petType: document.getElementById('petType').value,
+          petName: document.getElementById('petName').value,
+          problem: document.getElementById('problemDesc').value
+        });
+      });
+      
+      // Закрытие после успеха
+      document.getElementById('closeSuccessBtn').addEventListener('click', closeModal);
+      
+      // Обработчики других кнопок
+      document.querySelectorAll(".btn-login, .notification").forEach((el) => {
+        el.addEventListener("click", () =>
+          alert("Демо-версия: вход в личный кабинет")
+        );
+      });
+      
+      // Проверка авторизации
+      function checkAuth() {
+        const user = localStorage.getItem("petstory_user") || sessionStorage.getItem("petstory_user");
+        const btnLogin = document.querySelector(".btn-login");
+        if (user && btnLogin) {
+          const userData = JSON.parse(user);
+          btnLogin.innerHTML = `<i class="fas fa-user-circle"></i> ${userData.name}`;
+          btnLogin.onclick = () => {
+            if (confirm("Выйти из аккаунта?")) {
+              localStorage.removeItem("petstory_user");
+              sessionStorage.removeItem("petstory_user");
+              location.reload();
+            }
+          };
+        }
+      }
+      checkAuth();
+    </script>
+  </body>
+</html>

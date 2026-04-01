@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Подбор корма для питомца | Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="product-finder.css" />
+    <link rel="stylesheet" href="korm.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'; this.nextSibling.style.display='block';"
+            />
+            <span style="display: none">Pet Story</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к
+                  визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="vibor_doga.html"
+                  ><i class="fas fa-home"></i> Выбор и приобретение</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button
+              class="btn-login"
+              onclick="window.location.href='login.html'"
+            >
+              Войти
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="finder-main">
+      <div class="container">
+        <div class="finder-header">
+          <span class="finder-badge"
+            ><i class="fas fa-paw"></i> Подбор корма</span
+          >
+          <h1>Какой корм подходит вашему питомцу?</h1>
+          <p>
+            Ответьте на несколько вопросов, и мы подберём оптимальный вариант
+            питания с учётом возраста, образа жизни и особенностей здоровья
+            вашего любимца.
+          </p>
+        </div>
+
+        <!-- Шаг 1: Кто у вас? -->
+        <div class="finder-step active" id="step1">
+          <div class="step-title">
+            <span class="step-number">1</span>
+            <h2>Кто ваш питомец?</h2>
+          </div>
+          <div class="options-grid">
+            <div class="option-card" data-pet="dog">
+              <div class="option-icon"><i class="fas fa-dog"></i></div>
+              <h3>Собака</h3>
+            </div>
+            <div class="option-card" data-pet="cat">
+              <div class="option-icon"><i class="fas fa-cat"></i></div>
+              <h3>Кошка</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Шаг 2: Возраст -->
+        <div class="finder-step" id="step2">
+          <div class="step-title">
+            <span class="step-number">2</span>
+            <h2>Возраст питомца</h2>
+          </div>
+          <div class="options-grid" id="age-options"></div>
+        </div>
+
+        <!-- Шаг 3: Размер (только для собак) -->
+        <div class="finder-step" id="step3">
+          <div class="step-title">
+            <span class="step-number">3</span>
+            <h2>Размер собаки</h2>
+          </div>
+          <div class="options-grid">
+            <div class="option-card" data-size="small">
+              <div class="option-icon"><i class="fas fa-dog"></i></div>
+              <h3>Маленькая</h3>
+              <p>до 10 кг</p>
+            </div>
+            <div class="option-card" data-size="medium">
+              <div class="option-icon"><i class="fas fa-dog"></i></div>
+              <h3>Средняя</h3>
+              <p>10–25 кг</p>
+            </div>
+            <div class="option-card" data-size="large">
+              <div class="option-icon"><i class="fas fa-dog"></i></div>
+              <h3>Крупная</h3>
+              <p>более 25 кг</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Шаг 4: Особенности -->
+        <div class="finder-step" id="step4">
+          <div class="step-title">
+            <span class="step-number">4</span>
+            <h2>Есть ли особые потребности?</h2>
+          </div>
+          <div class="options-grid" id="needs-options"></div>
+          <div class="needs-hint">Выберите все подходящие варианты</div>
+        </div>
+
+        <!-- Шаг 5: Результат -->
+        <div class="finder-step" id="step5">
+          <div class="step-title">
+            <span class="step-number">5</span>
+            <h2>Ваши рекомендации</h2>
+          </div>
+          <div class="result-card" id="result-card">
+            <div class="result-loading" id="result-loading">
+              <i class="fas fa-spinner fa-pulse"></i> Подбираем идеальный
+              вариант...
+            </div>
+            <div
+              class="result-content"
+              id="result-content"
+              style="display: none"
+            ></div>
+            <button class="btn-reset" id="reset-finder">
+              <i class="fas fa-redo-alt"></i> Подобрать заново
+            </button>
+          </div>
+        </div>
+
+        <!-- Навигация -->
+        <div class="finder-navigation">
+          <button class="btn-prev" id="prevBtn" disabled>
+            <i class="fas fa-arrow-left"></i> Назад
+          </button>
+          <button class="btn-next" id="nextBtn">
+            Далее <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2026 Pet Story — сервис онлайн-консультаций с ветеринарами. Все
+          права защищены.
+        </p>
+        <p class="footer-note">
+          Информация не заменяет очный визит к врачу. При острых состояниях
+          обращайтесь в клинику.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Состояние подбора
+      let state = {
+        step: 1,
+        pet: null,
+        age: null,
+        size: null,
+        needs: [],
+      };
+
+      // Данные для возрастов
+      const ageOptions = {
+        dog: [
+          {
+            value: "puppy",
+            label: "Щенок (до 12 месяцев)",
+            icon: "fa-baby-carriage",
+          },
+          { value: "adult", label: "Взрослая (1–7 лет)", icon: "fa-dog" },
+          {
+            value: "senior",
+            label: "Пожилая (7+ лет)",
+            icon: "fa-calendar-alt",
+          },
+        ],
+        cat: [
+          {
+            value: "kitten",
+            label: "Котёнок (до 12 месяцев)",
+            icon: "fa-baby-carriage",
+          },
+          { value: "adult", label: "Взрослая (1–7 лет)", icon: "fa-cat" },
+          {
+            value: "senior",
+            label: "Пожилая (7+ лет)",
+            icon: "fa-calendar-alt",
+          },
+        ],
+      };
+
+      // Особые потребности
+      const needsOptions = [
+        {
+          value: "sensitive",
+          label: "Чувствительное пищеварение",
+          icon: "fa-stomach",
+        },
+        {
+          value: "allergy",
+          label: "Склонность к аллергии",
+          icon: "fa-allergies",
+        },
+        { value: "joints", label: "Поддержка суставов", icon: "fa-bone" },
+        { value: "weight", label: "Контроль веса", icon: "fa-weight-scale" },
+        {
+          value: "coat",
+          label: "Здоровье шерсти и кожи",
+          icon: "fa-feather-alt",
+        },
+        { value: "dental", label: "Уход за зубами", icon: "fa-tooth" },
+      ];
+
+      // База рекомендаций
+      const recommendations = {
+        dog: {
+          puppy: {
+            small:
+              "Для щенков маленьких пород рекомендуется корм с высоким содержанием белка и кальция для правильного роста костей. Подойдут линейки Royal Canin Mini Puppy или Purina Pro Plan Small Puppy.",
+            medium:
+              "Щенкам средних пород нужен сбалансированный корм с оптимальным соотношением белков и жиров. Рекомендуем Royal Canin Medium Puppy или Hill’s Science Puppy.",
+            large:
+              "Крупным щенкам важно умеренное содержание кальция для предотвращения проблем с суставами. Выбирайте Royal Canin Giant Puppy или Purina Pro Plan Large Puppy.",
+          },
+          adult: {
+            small:
+              "Взрослым собакам маленьких пород подойдёт корм для поддержания энергии и здоровья зубов. Royal Canin Mini Adult, Hill’s Small Adult.",
+            medium:
+              "Средним породам нужен корм для поддержания мышечной массы и активности. Royal Canin Medium Adult, Purina One Adult.",
+            large:
+              "Крупным взрослым собакам важна поддержка суставов. Royal Canin Giant Adult, Hill’s Large Adult.",
+          },
+          senior: {
+            small:
+              "Пожилым маленьким собакам необходим корм для поддержки суставов и сердечно-сосудистой системы. Royal Canin Mini Senior, Purina Pro Plan Senior.",
+            medium:
+              "Средним пожилым собакам нужна повышенная защита суставов и легкоусвояемые белки. Royal Canin Medium Senior.",
+            large:
+              "Крупным пожилым собакам критически важна поддержка суставов и почек. Royal Canin Giant Senior, Hill’s Senior Large Breed.",
+          },
+        },
+        cat: {
+          kitten:
+            "Котятам нужен богатый белком корм для активного роста. Рекомендуем Royal Canin Kitten, Hill’s Science Kitten, Purina Pro Plan Kitten.",
+          adult:
+            "Взрослым кошкам подойдёт сбалансированный корм для поддержания здоровья мочевыводящей системы. Royal Canin Adult, Hill’s Adult, Purina One Adult.",
+          senior:
+            "Пожилым кошкам важен корм с поддержкой почек и суставов. Royal Canin Senior, Hill’s Senior, Purina Pro Plan Senior.",
+        },
+      };
+
+      // Элементы DOM
+      const steps = document.querySelectorAll(".finder-step");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const resetBtn = document.getElementById("reset-finder");
+
+      // Обновление видимости шагов
+      function updateSteps() {
+        steps.forEach((step, index) => {
+          if (index + 1 === state.step) {
+            step.classList.add("active");
+          } else {
+            step.classList.remove("active");
+          }
+        });
+        prevBtn.disabled = state.step === 1;
+
+        // Обновляем текст кнопки "Далее"
+        if (state.step === 5) {
+          nextBtn.style.display = "none";
+        } else {
+          nextBtn.style.display = "inline-flex";
+        }
+      }
+
+      // Отрисовка шага 2 (возраст) в зависимости от выбранного питомца
+      function renderAgeStep() {
+        const container = document.getElementById("age-options");
+        if (!container || !state.pet) return;
+
+        const ages = ageOptions[state.pet];
+        container.innerHTML = ages
+          .map(
+            (age) => `
+        <div class="option-card ${
+          state.age === age.value ? "selected" : ""
+        }" data-age="${age.value}">
+          <div class="option-icon"><i class="fas ${age.icon}"></i></div>
+          <h3>${age.label}</h3>
+        </div>
+      `
+          )
+          .join("");
+
+        // Добавляем обработчики
+        document
+          .querySelectorAll("#age-options .option-card")
+          .forEach((card) => {
+            card.addEventListener("click", () => {
+              const age = card.getAttribute("data-age");
+              state.age = age;
+              document
+                .querySelectorAll("#age-options .option-card")
+                .forEach((c) => c.classList.remove("selected"));
+              card.classList.add("selected");
+            });
+          });
+      }
+
+      // Отрисовка шага 4 (особые потребности)
+      function renderNeedsStep() {
+        const container = document.getElementById("needs-options");
+        if (!container) return;
+
+        container.innerHTML = needsOptions
+          .map(
+            (need) => `
+        <div class="option-card ${
+          state.needs.includes(need.value) ? "selected" : ""
+        }" data-need="${need.value}">
+          <div class="option-icon"><i class="fas ${need.icon}"></i></div>
+          <h3>${need.label}</h3>
+        </div>
+      `
+          )
+          .join("");
+
+        // Обработчики для множественного выбора
+        document
+          .querySelectorAll("#needs-options .option-card")
+          .forEach((card) => {
+            card.addEventListener("click", () => {
+              const need = card.getAttribute("data-need");
+              if (state.needs.includes(need)) {
+                state.needs = state.needs.filter((n) => n !== need);
+                card.classList.remove("selected");
+              } else {
+                state.needs.push(need);
+                card.classList.add("selected");
+              }
+            });
+          });
+      }
+
+      // Генерация результата
+      function generateResult() {
+        const loadingEl = document.getElementById("result-loading");
+        const contentEl = document.getElementById("result-content");
+
+        loadingEl.style.display = "flex";
+        contentEl.style.display = "none";
+
+        setTimeout(() => {
+          let resultHtml = "";
+
+          if (state.pet === "dog") {
+            const ageKey = state.age;
+            const sizeKey = state.size;
+            if (
+              ageKey &&
+              sizeKey &&
+              recommendations.dog[ageKey] &&
+              recommendations.dog[ageKey][sizeKey]
+            ) {
+              resultHtml = `<p><strong><i class="fas fa-dog"></i> Для вашей ${
+                ageKey === "puppy"
+                  ? "собаки"
+                  : ageKey === "senior"
+                  ? "пожилой собаки"
+                  : "собаки"
+              } ${getSizeText(sizeKey)} породы:</strong></p>`;
+              resultHtml += `<p>${recommendations.dog[ageKey][sizeKey]}</p>`;
+            }
+          } else if (state.pet === "cat") {
+            const ageKey = state.age;
+            if (ageKey && recommendations.cat[ageKey]) {
+              resultHtml = `<p><strong><i class="fas fa-cat"></i> Для вашей ${
+                ageKey === "kitten"
+                  ? "кошки"
+                  : ageKey === "senior"
+                  ? "пожилой кошки"
+                  : "кошки"
+              }:</strong></p>`;
+              resultHtml += `<p>${recommendations.cat[ageKey]}</p>`;
+            }
+          }
+
+          // Добавляем рекомендации по особым потребностям
+          if (state.needs.length > 0) {
+            resultHtml += `<p><strong><i class="fas fa-heartbeat"></i> С учётом особых потребностей:</strong></p><ul>`;
+            state.needs.forEach((need) => {
+              const needLabel =
+                needsOptions.find((n) => n.value === need)?.label || need;
+              resultHtml += `<li>${needLabel}: рекомендуется обратить внимание на специализированные линейки кормов (например, Veterinary Diet).</li>`;
+            });
+            resultHtml += `</ul>`;
+          }
+
+          resultHtml += `<p class="result-note"><i class="fas fa-stethoscope"></i> Перед сменой корма рекомендуем проконсультироваться с ветеринарным врачом.</p>`;
+
+          contentEl.innerHTML = resultHtml;
+          loadingEl.style.display = "none";
+          contentEl.style.display = "block";
+        }, 500);
+      }
+
+      function getSizeText(size) {
+        switch (size) {
+          case "small":
+            return "маленькой";
+          case "medium":
+            return "средней";
+          case "large":
+            return "крупной";
+          default:
+            return "";
+        }
+      }
+
+      // Проверка возможности перехода на следующий шаг
+      function canGoNext() {
+        switch (state.step) {
+          case 1:
+            return state.pet !== null;
+          case 2:
+            return state.age !== null;
+          case 3:
+            return state.pet === "cat" || state.size !== null;
+          case 4:
+            return true;
+          default:
+            return true;
+        }
+      }
+
+      // Переход на следующий шаг
+      function nextStep() {
+        if (!canGoNext()) {
+          alert("Пожалуйста, выберите вариант");
+          return;
+        }
+
+        if (state.step === 4) {
+          state.step = 5;
+          updateSteps();
+          generateResult();
+        } else {
+          state.step++;
+          updateSteps();
+
+          // При переходе на шаг 3 для кошек пропускаем его
+          if (state.step === 3 && state.pet === "cat") {
+            state.step++;
+            updateSteps();
+          }
+        }
+      }
+
+      function prevStep() {
+        if (state.step > 1) {
+          state.step--;
+          updateSteps();
+        }
+      }
+
+      function resetFinder() {
+        state = {
+          step: 1,
+          pet: null,
+          age: null,
+          size: null,
+          needs: [],
+        };
+        updateSteps();
+
+        // Сбрасываем выделение на всех шагах
+        document
+          .querySelectorAll(".option-card")
+          .forEach((card) => card.classList.remove("selected"));
+
+        // Перерисовываем динамические шаги
+        renderAgeStep();
+        renderNeedsStep();
+
+        // Очищаем результат
+        document.getElementById("result-content").innerHTML = "";
+        document.getElementById("result-content").style.display = "none";
+        document.getElementById("result-loading").style.display = "flex";
+      }
+
+      // Инициализация обработчиков
+      function init() {
+        // Шаг 1: выбор питомца
+        document.querySelectorAll("[data-pet]").forEach((card) => {
+          card.addEventListener("click", () => {
+            state.pet = card.getAttribute("data-pet");
+            document
+              .querySelectorAll("[data-pet]")
+              .forEach((c) => c.classList.remove("selected"));
+            card.classList.add("selected");
+            renderAgeStep();
+          });
+        });
+
+        // Шаг 3: размер собаки
+        document.querySelectorAll("[data-size]").forEach((card) => {
+          card.addEventListener("click", () => {
+            state.size = card.getAttribute("data-size");
+            document
+              .querySelectorAll("[data-size]")
+              .forEach((c) => c.classList.remove("selected"));
+            card.classList.add("selected");
+          });
+        });
+
+        renderNeedsStep();
+
+        prevBtn.addEventListener("click", prevStep);
+        nextBtn.addEventListener("click", nextStep);
+        resetBtn.addEventListener("click", resetFinder);
+
+        updateSteps();
+      }
+
+      init();
+
+      // Обработчики для кнопок
+      document.querySelectorAll(".btn-login, .notification").forEach((el) => {
+        el.addEventListener("click", () =>
+          alert("Демо-версия: вход в личный кабинет")
+        );
+      });
+    </script>
+  </body>
+</html>

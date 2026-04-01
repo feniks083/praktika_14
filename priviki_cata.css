@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  color: #1f2937;
+  line-height: 1.5;
+  background: #ffffff;
+}
+header {
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #2563eb;
+  cursor: pointer;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-item {
+  position: relative;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 700;
+  font-size: 16px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.nav-links a:hover {
+  color: #2563eb;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 260px;
+  border-radius: 16px;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.25s ease;
+  z-index: 1001;
+  padding: 12px 0;
+  border: 1px solid #eef2ff;
+}
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: #374151;
+}
+.dropdown-menu a:hover {
+  background: #f8fafc;
+  color: #2563eb;
+}
+.dropdown-title {
+  padding: 8px 20px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+.dropdown-divider {
+  height: 1px;
+  background: #eef2ff;
+  margin: 8px 0;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.notification {
+  font-size: 22px;
+  color: #6b7280;
+  cursor: pointer;
+}
+.btn-login {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-login:hover {
+  background: #1d4ed8;
+}
+.hero-section {
+  background: linear-gradient(135deg, #dcfce7 0%, #ffffff 100%);
+  padding: 60px 0;
+  text-align: center;
+}
+.hero-section h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #15803d;
+  margin-bottom: 16px;
+}
+.hero-section p {
+  font-size: 1.2rem;
+  color: #166534;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.schedule-section {
+  padding: 40px 0;
+  background: white;
+}
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.vaccination-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.vaccination-table th {
+  background: #f9fafb;
+  padding: 16px;
+  text-align: left;
+  font-weight: 800;
+  border-bottom: 2px solid #e5e7eb;
+}
+.vaccination-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eef2ff;
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+.article-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.article-card:hover {
+  transform: translateY(-5px);
+}
+.article-icon {
+  background: #eef2ff;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.article-icon i {
+  font-size: 48px;
+  color: #2563eb;
+}
+.article-content {
+  padding: 24px;
+}
+.article-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.article-desc {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+.myths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+.myth-card {
+  background: #f9fafb;
+  border-radius: 20px;
+  padding: 24px;
+}
+.myth-icon {
+  width: 50px;
+  height: 50px;
+  background: #fee2e2;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.myth-icon i {
+  font-size: 24px;
+  color: #dc2626;
+}
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 40px 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}
+      /* Стили для модального окна */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .modal-container {
+        background: white;
+        max-width: 700px;
+        width: 90%;
+        max-height: 85vh;
+        border-radius: 28px;
+        overflow: hidden;
+        position: relative;
+        animation: modalSlideIn 0.3s ease;
+      }
+      @keyframes modalSlideIn {
+        from {
+          transform: translateY(-30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .modal-header {
+        padding: 24px 28px;
+        border-bottom: 1px solid #eef2ff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .modal-header h2 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #111827;
+        margin: 0;
+      }
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #6b7280;
+        transition: color 0.2s;
+      }
+      .modal-close:hover {
+        color: #2563eb;
+      }
+      .modal-body {
+        padding: 28px;
+        overflow-y: auto;
+        max-height: calc(85vh - 80px);
+      }
+      .modal-body h3 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin: 20px 0 12px;
+        color: #111827;
+      }
+      .modal-body h3:first-of-type {
+        margin-top: 0;
+      }
+      .modal-body p {
+        margin-bottom: 16px;
+        color: #374151;
+        line-height: 1.6;
+      }
+      .modal-body ul,
+      .modal-body ol {
+        margin: 12px 0 20px 24px;
+      }
+      .modal-body li {
+        margin-bottom: 8px;
+        color: #4b5563;
+      }
+      .modal-body .article-icon {
+        font-size: 2rem;
+        color: #2563eb;
+        margin-bottom: 16px;
+        text-align: center;
+      }

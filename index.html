@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Pet Story — Всё о здоровье, питании и уходе за питомцем</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Header с выпадающими меню -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="showMainPage()">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'; this.nextSibling.style.display='block';"
+            />
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a onclick="showMainPage()" id="main-link" class="active"
+                >Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_doga.html"
+                  ><i class="fas fa-book-open"></i> Породы собак</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Главная страница -->
+    <div id="main-page">
+      <section class="hero">
+        <div class="hero-image">
+          <img
+            src="./img/banner.webp"
+            alt="Питомцы"
+            onerror="this.src='https://via.placeholder.com/1920x360?text=Pet+Story'"
+          />
+        </div>
+        <div class="hero-content">
+          <h1>Все о здоровье, правильном питании и уходе за питомцем</h1>
+          <div class="search-box">
+            <input type="text" placeholder="Как подобрать оптимальный корм?" />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <h2 class="section-title">Сервисы</h2>
+          <div class="service-categories">
+            <div class="category">
+              <div class="category-header">
+                <div class="category-icon health">
+                  <img src="img/1.png" alt="" />
+                </div>
+                <h3 class="category-title">Здоровье</h3>
+              </div>
+              <div class="service-items">
+                <div class="service-item" data-url="televet.html">
+                  <div class="service-icon blue">
+                    <img src="img/2.png" alt="" />
+                  </div>
+                  <span class="service-name">Ветеринар онлайн</span>
+                </div>
+                <div class="service-item" data-url="straxovanie.html">
+                  <div class="service-icon blue">
+                    <img src="img/3.png" alt="" />
+                  </div>
+                  <span class="service-name">Страховка</span>
+                </div>
+                <div class="service-item" data-url="vizit_pitomca.html">
+                  <div class="service-icon blue">
+                    <img src="img/5.png" alt="" />
+                  </div>
+                  <span class="service-name">Подготовка к ветврачу</span>
+                </div>
+                <div class="service-item" data-url="kurs_chs.html">
+                  <div class="service-icon blue">
+                    <img src="img/6.png" alt="" />
+                  </div>
+                  <span class="service-name">Курс экстренной помощи</span>
+                </div>
+              </div>
+            </div>
+            <div class="category">
+              <div class="category-header">
+                <div class="category-icon food">
+                  <img src="img/7.png" alt="" />
+                </div>
+                <h3 class="category-title">Питание</h3>
+              </div>
+              <div class="service-items">
+                <div class="service-item" data-url="korm.html">
+                  <div class="service-icon blue">
+                    <img src="img/8.png" alt="" />
+                  </div>
+                  <span class="service-name">Подобрать оптимальный корм</span>
+                </div>
+                <div class="service-item disabled">
+                  <div class="service-icon gray">
+                    <img src="img/9.png" alt="" />
+                  </div>
+                  <span class="service-name">Сравнить корма</span>
+                </div>
+                <div class="service-item disabled">
+                  <div class="service-icon gray">
+                    <img src="img/10.png" alt="" />
+                  </div>
+                  <span class="service-name"
+                    >Проверить, подходит ли корм питомцу</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="category">
+              <div class="category-header">
+                <div class="category-icon care">
+                  <img src="img/11.png" alt="" />
+                </div>
+                <h3 class="category-title">Уход</h3>
+              </div>
+              <div class="service-items">
+                <div class="service-item" data-url="pravila_yxoda.html">
+                  <div class="service-icon blue">
+                    <img src="img/12.png" alt="" />
+                  </div>
+                  <span class="service-name">Правила ухода за питомцем</span>
+                </div>
+                <div class="service-item" data-url="shcool.html">
+                  <div class="service-icon blue">
+                    <img src="img/13.png" alt="" />
+                  </div>
+                  <span class="service-name"
+                    >Школа ответственного владельца</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="articles">
+        <div class="container">
+          <h2 class="section-title">Статьи</h2>
+          <div class="articles-carousel">
+            <button class="carousel-btn prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="articles-grid">
+              <!-- Статья 1: Тибетский мастиф -->
+              <div class="article-card" data-article="stati1.html">
+                <div class="article-image">
+                  <img src="img/card1.png" alt="" /><span class="article-badge"
+                    ><i class="fas fa-heart"></i
+                  ></span>
+                </div>
+                <div class="article-content">
+                  <div class="article-date">16.03.2026</div>
+                  <div class="article-title">
+                    Вес тибетского мастифа – сколько может весить питомец по
+                    стандарту...
+                  </div>
+                </div>
+              </div>
+              <!-- Статья 2: Мопс -->
+              <div class="article-card" data-article="stati2.html">
+                <div class="article-image">
+                  <img src="img/card2.png" alt="" /><span class="article-badge"
+                    ><i class="fas fa-heart"></i
+                  ></span>
+                </div>
+                <div class="article-content">
+                  <div class="article-date">16.03.2026</div>
+                  <div class="article-title">
+                    Вес мопса – сколько весит порода по стандарту
+                  </div>
+                </div>
+              </div>
+              <!-- Статья 3: Немецкий дог -->
+              <div class="article-card" data-article="stati3.html">
+                <div class="article-image">
+                  <img src="img/card3.png" alt="" /><span class="article-badge"
+                    ><i class="fas fa-heart"></i
+                  ></span>
+                </div>
+                <div class="article-content">
+                  <div class="article-date">16.03.2026</div>
+                  <div class="article-title">
+                    Вес немецкого дога – сколько весят собаки этой породы
+                  </div>
+                </div>
+              </div>
+              <!-- Статья 4: Бенгальская кошка -->
+              <div class="article-card" data-article="stati4.html">
+                <div class="article-image">
+                  <img src="img/card4.png" alt="" /><span
+                    class="article-badge blue"
+                    ><i class="fas fa-heart"></i
+                  ></span>
+                </div>
+                <div class="article-content">
+                  <div class="article-date">16.03.2026</div>
+                  <div class="article-title">
+                    Вес бенгальской кошки – сколько весят котята и взрослые
+                    животные
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2026 Pet Story — сервис онлайн-консультаций с ветеринарами. Все
+          права защищены.
+        </p>
+        <p class="footer-note">
+          Информация не заменяет очный визит к врачу. При острых состояниях
+          обращайтесь в клинику.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Функции переключения страниц (если есть вторая страница)
+      function showMainPage() {
+        // Если на странице есть элемент televet-page, скрываем его
+        const televetPage = document.getElementById("televet-page");
+        if (televetPage) {
+          televetPage.style.display = "none";
+        }
+        const mainPage = document.getElementById("main-page");
+        if (mainPage) {
+          mainPage.style.display = "block";
+        }
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((link) => link.classList.remove("active"));
+        const mainLink = document.getElementById("main-link");
+        if (mainLink) {
+          mainLink.classList.add("active");
+        }
+      }
+
+      function showTelevetPage() {
+        const mainPage = document.getElementById("main-page");
+        const televetPage = document.getElementById("televet-page");
+        if (mainPage && televetPage) {
+          mainPage.style.display = "none";
+          televetPage.style.display = "block";
+        } else {
+          // Если страницы televet нет, просто показываем alert
+          alert("✨ Демо-версия: страница ветеринарной консультации");
+        }
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((link) => link.classList.remove("active"));
+      }
+
+      // Карусель
+      const prevBtn = document.querySelector(".carousel-btn.prev");
+      const nextBtn = document.querySelector(".carousel-btn.next");
+      const articlesGrid = document.querySelector(".articles-grid");
+      if (prevBtn && nextBtn && articlesGrid) {
+        let scrollAmount = 0;
+        const cardWidth = 300,
+          gap = 25,
+          scrollStep = cardWidth + gap;
+        nextBtn.addEventListener("click", () => {
+          const maxScroll = articlesGrid.scrollWidth - articlesGrid.clientWidth;
+          if (scrollAmount + scrollStep <= maxScroll) {
+            scrollAmount += scrollStep;
+            articlesGrid.style.transform = `translateX(-${scrollAmount}px)`;
+          }
+        });
+        prevBtn.addEventListener("click", () => {
+          if (scrollAmount - scrollStep >= 0) {
+            scrollAmount -= scrollStep;
+            articlesGrid.style.transform = `translateX(-${scrollAmount}px)`;
+          }
+        });
+      }
+
+      // Обработчики кнопок
+      document.querySelectorAll(".btn-login, .notification").forEach((el) => {
+        el.addEventListener("click", () =>
+          alert("Демо-версия: вход в личный кабинет")
+        );
+      });
+
+      // ========== НОВЫЙ ОБРАБОТЧИК ДЛЯ СЕРВИСОВ ==========
+      // При клике на сервис с атрибутом data-url переходим на соответствующую страницу
+      document.querySelectorAll(".service-item[data-url]").forEach((item) => {
+        item.addEventListener("click", () => {
+          const url = item.getAttribute("data-url");
+          if (url) {
+            window.location.href = url;
+          }
+        });
+      });
+
+      // Для сервисов без data-url (разрабатываемые)
+      document
+        .querySelectorAll(".service-item:not(.disabled):not([data-url])")
+        .forEach((el) => {
+          el.addEventListener("click", () => alert("Сервис в разработке"));
+        });
+
+      // ========== ОБРАБОТЧИК ДЛЯ КАРТОЧЕК СТАТЕЙ ==========
+      document.querySelectorAll(".article-card").forEach((card) => {
+        card.addEventListener("click", (e) => {
+          const articleFile = card.getAttribute("data-article");
+          if (articleFile) {
+            window.location.href = articleFile;
+          } else {
+            alert("Открыть статью");
+          }
+        });
+      });
+
+      document
+        .querySelector(".search-box button")
+        ?.addEventListener("click", () => {
+          const input = document.querySelector(".search-box input");
+          alert(`Поиск: ${input?.value || "введите запрос"}`);
+        });
+
+      document
+        .querySelectorAll(
+          ".btn-primary, .btn-secondary, .btn-specialist, .btn-cta, .problem-card"
+        )
+        .forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            alert("✨ Демо-версия: форма записи к ветеринару");
+          });
+        });
+
+      // Показываем главную страницу при загрузке
+      showMainPage();
+
+      // Проверка авторизации
+      function checkAuth() {
+        const user = localStorage.getItem("petstory_user") || sessionStorage.getItem("petstory_user");
+        const btnLogin = document.querySelector(".btn-login");
+        if (user && btnLogin) {
+          const userData = JSON.parse(user);
+          btnLogin.innerHTML = `<i class="fas fa-user-circle"></i> ${userData.name}`;
+          btnLogin.onclick = () => {
+            if (confirm("Выйти из аккаунта?")) {
+              localStorage.removeItem("petstory_user");
+              sessionStorage.removeItem("petstory_user");
+              location.reload();
+            }
+          };
+        }
+      }
+      checkAuth();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Курс экстренной ветеринарной помощи — Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="kurs_chs.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_doga.html"
+                  ><i class="fas fa-book-open"></i> Породы собак</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+    </header>
+
+
+    <!-- Hero секция -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="emergency-badge">
+          <i class="fas fa-heartbeat"></i> Спаси жизнь питомца
+        </div>
+        <h1>Курс экстренной ветеринарной помощи</h1>
+        <p>
+          Научитесь действовать правильно в критических ситуациях. 6 видеоуроков
+        </p>
+      </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">45 мин</div>
+            <div class="stat-label">Общая длительность</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Видеоуроков</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Экстренных ситуаций</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Бесплатно</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Видеоуроки -->
+    <section class="videos-section">
+      <div class="container">
+        <h2 class="section-title">Видеоуроки курса</h2>
+        <div class="videos-grid">
+          <div
+            class="video-card"
+            onclick="alert('Демо-версия: урок 1. Сердечно-легочная реанимация')"
+          >
+            <div class="video-thumb">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+              <i
+                class="fas fa-heartbeat"
+                style="font-size: 48px; color: #dc2626"
+              ></i>
+            </div>
+            <div class="video-content">
+              <h3>Сердечно-легочная реанимация (СЛР)</h3>
+              <p>
+                Алгоритм действий при остановке сердца и дыхания у собак и
+                кошек.
+              </p>
+              <div class="video-duration">
+                <i class="fas fa-clock"></i> 12 минут
+              </div>
+            </div>
+          </div>
+          <div
+            class="video-card"
+            onclick="alert('Демо-версия: урок 2. Первая помощь при отравлении')"
+          >
+            <div class="video-thumb">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+              <i
+                class="fas fa-skull-crossbones"
+                style="font-size: 48px; color: #dc2626"
+              ></i>
+            </div>
+            <div class="video-content">
+              <h3>Первая помощь при отравлении</h3>
+              <p>Что делать, если питомец съел яд или опасное вещество.</p>
+              <div class="video-duration">
+                <i class="fas fa-clock"></i> 8 минут
+              </div>
+            </div>
+          </div>
+          <div
+            class="video-card"
+            onclick="alert('Демо-версия: урок 3. Кровотечения и раны')"
+          >
+            <div class="video-thumb">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+              <i
+                class="fas fa-hand-holding-heart"
+                style="font-size: 48px; color: #dc2626"
+              ></i>
+            </div>
+            <div class="video-content">
+              <h3>Кровотечения и раны</h3>
+              <p>Как остановить кровь, обработать рану и наложить повязку.</p>
+              <div class="video-duration">
+                <i class="fas fa-clock"></i> 10 минут
+              </div>
+            </div>
+          </div>
+          <div
+            class="video-card"
+            onclick="alert('Демо-версия: урок 4. Переломы и травмы')"
+          >
+            <div class="video-thumb">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+              <i
+                class="fas fa-bone"
+                style="font-size: 48px; color: #dc2626"
+              ></i>
+            </div>
+            <div class="video-content">
+              <h3>Переломы и травмы</h3>
+              <p>Иммобилизация, транспортировка и первая помощь.</p>
+              <div class="video-duration">
+                <i class="fas fa-clock"></i> 7 минут
+              </div>
+            </div>
+          </div>
+          <div
+            class="video-card"
+            onclick="alert('Демо-версия: урок 5. Тепловой удар и перегрев')"
+          >
+            <div class="video-thumb">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+              <i
+                class="fas fa-temperature-high"
+                style="font-size: 48px; color: #dc2626"
+              ></i>
+            </div>
+            <div class="video-content">
+              <h3>Тепловой удар и перегрев</h3>
+              <p>Симптомы и действия при перегреве питомца.</p>
+              <div class="video-duration">
+                <i class="fas fa-clock"></i> 5 минут
+              </div>
+            </div>
+          </div>
+          <div
+            class="video-card"
+            onclick="alert('Демо-версия: урок 6. Судороги и эпилепсия')"
+          >
+            <div class="video-thumb">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+              <i
+                class="fas fa-brain"
+                style="font-size: 48px; color: #dc2626"
+              ></i>
+            </div>
+            <div class="video-content">
+              <h3>Судороги и эпилепсия</h3>
+              <p>Как помочь питомцу во время приступа.</p>
+              <div class="video-duration">
+                <i class="fas fa-clock"></i> 6 минут
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Экстренные ситуации -->
+    <section class="scenarios-section">
+      <div class="container">
+        <h2 class="section-title">
+          Чек-лист: что делать в экстренной ситуации
+        </h2>
+        <div class="scenarios-grid">
+          <div class="scenario-card">
+            <div class="scenario-icon"><i class="fas fa-lungs"></i></div>
+            <h3>Удушье / инородное тело</h3>
+            <p>Питомец кашляет, трет морду лапами, не может дышать.</p>
+            <div class="scenario-steps">
+              <p>
+                <i class="fas fa-check-circle" style="color: #10b981"></i>
+                Алгоритм:
+              </p>
+              <p>
+                1. Откройте пасть, осмотрите ротовую полость<br />2. Прием
+                Геймлиха для животных<br />3. Немедленно к ветеринару
+              </p>
+            </div>
+          </div>
+          <div class="scenario-card">
+            <div class="scenario-icon"><i class="fas fa-burn"></i></div>
+            <h3>Ожоги</h3>
+            <p>Ожог от огня, химикатов или горячей жидкости.</p>
+            <div class="scenario-steps">
+              <p>
+                <i class="fas fa-check-circle" style="color: #10b981"></i>
+                Алгоритм:
+              </p>
+              <p>
+                1. Охладите место ожога холодной водой 15-20 мин<br />2. Не
+                используйте масло и мази<br />3. Наложите стерильную повязку
+              </p>
+            </div>
+          </div>
+          <div class="scenario-card">
+            <div class="scenario-icon"><i class="fas fa-fish"></i></div>
+            <h3>Укус насекомого</h3>
+            <p>Отек, зуд, беспокойство, возможна аллергическая реакция.</p>
+            <div class="scenario-steps">
+              <p>
+                <i class="fas fa-check-circle" style="color: #10b981"></i>
+                Алгоритм:
+              </p>
+              <p>
+                1. Удалите жало, если есть<br />2. Приложите холод<br />3. Дайте
+                антигистаминное (по назначению врача)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Pet Story — Курс экстренной ветеринарной помощи</p>
+        <p style="font-size: 0.75rem; margin-top: 12px">
+          Знания могут спасти жизнь вашего питомца
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Обработчики
+      document
+        .querySelector(".btn-login")
+        .addEventListener("click", () => alert("Вход в личный кабинет"));
+      document
+        .querySelector(".notification")
+        .addEventListener("click", () => alert("Уведомления"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Вход в личный кабинет — Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="showMainPage()">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'; this.nextSibling.style.display='block';"
+            />
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a onclick="showMainPage()" id="main-link" class="active"
+                >Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="vibor_doga.html"
+                  ><i class="fas fa-home"></i> Выбор и приобретение</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="login-page">
+      <div class="login-container">
+        <div class="login-header">
+          <div class="logo-icon">
+            <i class="fas fa-paw"></i>
+          </div>
+          <h1>Добро пожаловать!</h1>
+          <p>Войдите в свой аккаунт Pet Story</p>
+        </div>
+
+        <div class="login-form">
+          <div id="errorMessage" class="error-message"></div>
+          <div id="successMessage" class="success-message"></div>
+
+          <form id="loginForm">
+            <div class="input-group">
+              <label>Email или телефон</label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="example@mail.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label>Пароль</label>
+              <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="••••••••"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" id="remember" /> Запомнить меня
+              </label>
+              <a href="#" class="forgot-link" id="forgotPassword"
+                >Забыли пароль?</a
+              >
+            </div>
+
+            <button type="submit" class="btn-login-submit">
+              <i class="fas fa-sign-in-alt"></i> Войти
+            </button>
+          </form>
+
+          <div class="divider">
+            <span>или войдите через</span>
+          </div>
+
+          <div class="social-buttons">
+            <button class="social-btn" id="vkLogin">
+              <i class="fab fa-vk"></i> VK
+            </button>
+            <button class="social-btn" id="googleLogin">
+              <i class="fab fa-google"></i> Google
+            </button>
+            <button class="social-btn" id="appleLogin">
+              <i class="fab fa-apple"></i> Apple
+            </button>
+          </div>
+
+          <div class="register-link">
+            Нет аккаунта? <a href="#" id="registerLink">Зарегистрироваться</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2026 Pet Story — сервис онлайн-консультаций с ветеринарами. Все
+          права защищены.
+        </p>
+        <p class="footer-note">
+          Информация не заменяет очный визит к врачу. При острых состояниях
+          обращайтесь в клинику.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Демо-данные для входа
+      const demoUsers = [
+        { email: "user@example.com", password: "123456", name: "Анна" },
+        {
+          email: "test@petstory.ru",
+          password: "petstory",
+          name: "Тестовый пользователь",
+        },
+      ];
+
+      // Обработка формы входа
+      const loginForm = document.getElementById("loginForm");
+      const errorMessageDiv = document.getElementById("errorMessage");
+      const successMessageDiv = document.getElementById("successMessage");
+
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const remember = document.getElementById("remember").checked;
+
+        // Проверка демо-пользователей
+        const user = demoUsers.find(
+          (u) => u.email === email && u.password === password
+        );
+
+        if (user) {
+          // Успешный вход
+          if (remember) {
+            localStorage.setItem(
+              "petstory_user",
+              JSON.stringify({
+                email: user.email,
+                name: user.name,
+                loggedIn: true,
+              })
+            );
+          } else {
+            sessionStorage.setItem(
+              "petstory_user",
+              JSON.stringify({
+                email: user.email,
+                name: user.name,
+                loggedIn: true,
+              })
+            );
+          }
+
+          successMessageDiv.style.display = "block";
+          successMessageDiv.innerHTML = `<i class="fas fa-check-circle"></i> Успешный вход! Добро пожаловать, ${user.name}!`;
+          errorMessageDiv.style.display = "none";
+
+          // Перенаправление через 1.5 секунды
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1500);
+        } else {
+          // Ошибка входа
+          errorMessageDiv.style.display = "block";
+          errorMessageDiv.innerHTML =
+            '<i class="fas fa-exclamation-circle"></i> Неверный email или пароль. Попробуйте: user@example.com / 123456';
+          successMessageDiv.style.display = "none";
+        }
+      });
+
+      // Забыли пароль
+      document
+        .getElementById("forgotPassword")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          alert(
+            "📧 Демо-версия: Инструкция по восстановлению пароля отправлена на вашу почту."
+          );
+        });
+
+      // Регистрация
+      document.getElementById("registerLink").addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("📝 Демо-версия: Форма регистрации откроется в ближайшее время.");
+      });
+
+      // Социальные кнопки
+      document.getElementById("vkLogin").addEventListener("click", () => {
+        alert("🔐 Демо-версия: Вход через VK");
+      });
+      document.getElementById("googleLogin").addEventListener("click", () => {
+        alert("🔐 Демо-версия: Вход через Google");
+      });
+      document.getElementById("appleLogin").addEventListener("click", () => {
+        alert("🔐 Демо-версия: Вход через Apple ID");
+      });
+
+      // Уведомления
+      document.querySelector(".notification").addEventListener("click", () => {
+        alert("🔔 Уведомления: У вас нет новых уведомлений");
+      });
+    </script>
+  </body>
+</html>

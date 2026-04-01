@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Породы кошек — Pet Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="poroda_catov.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" onclick="window.location.href='index.html'">
+            <img
+              src="./img/logo.png"
+              alt="Pet Story"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li class="nav-item">
+              <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="televet.html"
+                  ><i class="fas fa-video"></i> Ветеринар онлайн</a
+                >
+                <a href="straxovanie.html"
+                  ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+                >
+                <a href="shcool.html"
+                  ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="vizit_pitomca.html"
+                  ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+                >
+                <a href="kurs_chs.html"
+                  ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Собаки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_doga.html"
+                  ><i class="fas fa-book-open"></i> Породы собак</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_doge.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+                >
+                <a href="privivki_doga.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a>Кошки <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">Породы и выбор</div>
+                <a href="poroda_catov.html"
+                  ><i class="fas fa-book-open"></i> Породы кошек</a
+                >
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-title">Уход и воспитание</div>
+                <a href="vse_o_cate.html"
+                  ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+                >
+                <a href="priviki_cata.html"
+                  ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+                >
+              </div>
+            </li>
+
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <i class="fas fa-bell notification"></i>
+            <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+          </div>
+    </header>
+
+
+    <section class="hero-section">
+      <div class="container">
+        <h1>🐱 Породы кошек</h1>
+        <p>
+          Более 80 пород кошек с описанием, типом шерсти и происхождением.
+          Найдите своего идеального пушистого друга!
+        </p>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Поиск по названию породы..."
+          /><i class="fas fa-search"></i>
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Все породы</button
+          ><button class="filter-btn" data-filter="short">
+            Короткошёрстные</button
+          ><button class="filter-btn" data-filter="long">Длинношёрстные</button
+          ><button class="filter-btn" data-filter="hairless">Лысые</button>
+        </div>
+        <div class="breeds-table-container">
+          <table class="breeds-table">
+            <thead>
+              <tr>
+                <th>Порода</th>
+                <th>Тип шерсти</th>
+                <th>Происхождение</th>
+              </tr>
+            </thead>
+            <tbody id="breedsTableBody"></tbody>
+          </table>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>
+              <i class="fas fa-cat" style="color: #2563eb"></i> Как выбрать
+              породу?
+            </h3>
+            <p>
+              Учитывайте характер, уход за шерстью, активность и наличие
+              аллергии.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>
+              <i class="fas fa-cut" style="color: #2563eb"></i> Тип шерсти
+            </h3>
+            <p>
+              Короткошёрстные требуют меньше ухода, длинношёрстные нуждаются в
+              регулярном вычёсывании.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>
+              <i class="fas fa-globe" style="color: #2563eb"></i> Происхождение
+            </h3>
+            <p>
+              Породы формировались в разных странах под влиянием климата и
+              культуры.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Pet Story — Породы кошек</p>
+        <p style="font-size: 0.75rem; margin-top: 12px">
+          Все породы собраны из открытых источников и данных WCF
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const catBreeds = [
+        "Абиссинская кошка",
+        "Австралийский мист",
+        "Азиатская табби",
+        "Американская бурманская",
+        "Американская жесткошерстная",
+        "Американская короткошерстная",
+        "Американский бобтейл",
+        "Американский кёрл",
+        "Анатолийская кошка",
+        "Аравийский мау",
+        "Балинезийская кошка",
+        "Бамбино",
+        "Бенгальская кошка",
+        "Бирманская кошка",
+        "Бомбейская кошка",
+        "Бразильская короткошерстная",
+        "Британская короткошерстная",
+        "Бурманская кошка",
+        "Бурмилла",
+        "Гавана",
+        "Гималайская кошка",
+        "Двэльф",
+        "Девон-рекс",
+        "Донской сфинкс",
+        "Европейская короткошерстная",
+        "Египетская мау",
+        "Йоркская шоколадная кошка",
+        "Калифорнийская сияющая",
+        "Канаани",
+        "Канадский сфинкс",
+        "Каракет",
+        "Карельский бобтейл",
+        "Кимрик",
+        "Корат",
+        "Корниш рекс",
+        "Курильский бобтейл",
+        "Лаперм",
+        "Ликои",
+        "Мандалай",
+        "Манчкин",
+        "Мейн-кун",
+        "Меконгский бобтейл",
+        "Минскин",
+        "Мэнкс",
+        "Наполеон",
+        "Невская маскарадная",
+        "Немецкий рекс",
+        "Нибелунг",
+        "Норвежская лесная",
+        "Орегон-рекс",
+        "Ориентальная кошка",
+        "Охос азулес",
+        "Оцикет",
+        "Персидская кошка",
+        "Петерболд",
+        "Пиксибоб",
+        "Рагамаффин",
+        "Русская голубая",
+        "Рэгдолл",
+        "Саванна",
+        "Сейшельская",
+        "Селкирк-рекс",
+        "Серенгети",
+        "Сиамская кошка",
+        "Сибирская кошка",
+        "Сингапурская",
+        "Скокум",
+        "Скоттиш страйт",
+        "Сноу-шу",
+        "Сококе",
+        "Сомалийская",
+        "Тайская кошка",
+        "Тойгер",
+        "Тонкинская",
+        "Турецкая ангора",
+        "Турецкий ван",
+        "Украинский левкой",
+        "Уральский рекс",
+        "Форин вайт",
+        "Хайленд фолд",
+        "Цейлонская",
+        "Чаузи",
+        "Шантильи тиффани",
+        "Шартрез",
+        "Шотландская вислоухая",
+        "Эгейская",
+        "Экзотическая короткошерстная",
+        "Яванез",
+        "Японский бобтейл",
+      ];
+      const coatType = {
+        "Абиссинская кошка": "Короткошёрстная",
+        "Бенгальская кошка": "Короткошёрстная",
+        "Британская короткошёрстная": "Короткошёрстная",
+        "Донской сфинкс": "Лысая",
+        "Канадский сфинкс": "Лысая",
+        "Мейн-кун": "Длинношёрстная",
+        "Невская маскарадная": "Длинношёрстная",
+        "Норвежская лесная": "Длинношёрстная",
+        "Персидская кошка": "Длинношёрстная",
+        "Русская голубая": "Короткошёрстная",
+        Рэгдолл: "Длинношёрстная",
+        "Сиамская кошка": "Короткошёрстная",
+        "Сибирская кошка": "Длинношёрстная",
+        Сфинкс: "Лысая",
+        "Шотландская вислоухая": "Короткошёрстная",
+        "Экзотическая короткошерстная": "Короткошёрстная",
+        "Японский бобтейл": "Короткошёрстная",
+      };
+      const origin = {
+        "Абиссинская кошка": "Египет",
+        "Бенгальская кошка": "США",
+        "Британская короткошёрстная": "Великобритания",
+        "Донской сфинкс": "Россия",
+        "Мейн-кун": "США",
+        "Невская маскарадная": "Россия",
+        "Персидская кошка": "Иран",
+        "Русская голубая": "Россия",
+        "Сиамская кошка": "Таиланд",
+        "Сибирская кошка": "Россия",
+        "Шотландская вислоухая": "Великобритания",
+      };
+      function getCoat(breed) {
+        if (coatType[breed]) return coatType[breed];
+        if (breed.includes("рекс") || breed.includes("сфинкс"))
+          return breed.includes("сфинкс") ? "Лысая" : "Короткошёрстная";
+        if (
+          breed.includes("кун") ||
+          breed.includes("лесная") ||
+          breed.includes("перс") ||
+          breed.includes("рэгдолл")
+        )
+          return "Длинношёрстная";
+        return "Короткошёрстная";
+      }
+      function getOrigin(breed) {
+        if (origin[breed]) return origin[breed];
+        if (
+          breed.includes("Русская") ||
+          breed.includes("Сибирская") ||
+          breed.includes("Донской")
+        )
+          return "Россия";
+        if (breed.includes("Американская") || breed.includes("Бенгальская"))
+          return "США";
+        if (breed.includes("Британская") || breed.includes("Шотландская"))
+          return "Великобритания";
+        return "Разные страны";
+      }
+      const breedsData = catBreeds.map((b) => ({
+        name: b,
+        coat: getCoat(b),
+        origin: getOrigin(b),
+      }));
+      let currentFilter = "all",
+        currentPage = 1,
+        searchTerm = "";
+      const itemsPerPage = 20;
+      function filterBreeds() {
+        return breedsData.filter((b) => {
+          if (
+            searchTerm &&
+            !b.name.toLowerCase().includes(searchTerm.toLowerCase())
+          )
+            return false;
+          if (currentFilter === "short" && b.coat !== "Короткошёрстная")
+            return false;
+          if (currentFilter === "long" && b.coat !== "Длинношёрстная")
+            return false;
+          if (currentFilter === "hairless" && b.coat !== "Лысая") return false;
+          return true;
+        });
+      }
+      function renderTable() {
+        const filtered = filterBreeds();
+        const totalPages = Math.ceil(filtered.length / itemsPerPage);
+        const start = (currentPage - 1) * itemsPerPage;
+        const pageItems = filtered.slice(start, start + itemsPerPage);
+        document.getElementById("breedsTableBody").innerHTML = pageItems
+          .map(
+            (b) =>
+              `<tr onclick="alert('Демо: информация о породе ${b.name}')"><td class="breed-name">${b.name}</td><td>${b.coat}</td><td>${b.origin}</td></tr>`
+          )
+          .join("");
+        const paginationDiv = document.getElementById("pagination");
+        if (totalPages <= 1) {
+          paginationDiv.innerHTML = "";
+          return;
+        }
+        let html = "";
+        for (let i = 1; i <= totalPages; i++)
+          html += `<button class="page-btn ${
+            i === currentPage ? "active" : ""
+          }" data-page="${i}">${i}</button>`;
+        paginationDiv.innerHTML = html;
+        document.querySelectorAll(".page-btn").forEach((btn) =>
+          btn.addEventListener("click", () => {
+            currentPage = parseInt(btn.dataset.page);
+            renderTable();
+          })
+        );
+      }
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        searchTerm = e.target.value;
+        currentPage = 1;
+        renderTable();
+      });
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentFilter = btn.dataset.filter;
+          currentPage = 1;
+          renderTable();
+        });
+      });
+      renderTable();
+      document
+        .querySelector(".btn-login")
+        .addEventListener("click", () => alert("Вход в личный кабинет"));
+      document
+        .querySelector(".notification")
+        .addEventListener("click", () => alert("Уведомления"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Контакты — Pet Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap&subset=cyrillic" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo" onclick="window.location.href='index.html'">
+          <img
+            src="./img/logo.png"
+            alt="Pet Story"
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li class="nav-item">
+            <a>Сервисы <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="televet.html"
+                ><i class="fas fa-video"></i> Ветеринар онлайн</a
+              >
+              <a href="straxovanie.html"
+                ><i class="fas fa-shield-alt"></i> Страхование питомца</a
+              >
+              <a href="shcool.html"
+                ><i class="fas fa-graduation-cap"></i> Школа владельца</a
+              >
+              <div class="dropdown-divider"></div>
+              <a href="vizit_pitomca.html"
+                ><i class="fas fa-suitcase-medical"></i> Подготовка к визиту</a
+              >
+              <a href="kurs_chs.html"
+                ><i class="fas fa-heartbeat"></i> Курс экстренной помощи</a
+              >
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a>Собаки <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-title">Породы и выбор</div>
+              <a href="poroda_doga.html"
+                ><i class="fas fa-book-open"></i> Породы собак</a
+              >
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-title">Уход и воспитание</div>
+              <a href="vse_o_doge.html"
+                ><i class="fas fa-baby-carriage"></i> Всё о щенке</a
+              >
+              <a href="privivki_doga.html"
+                ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+              >
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a>Кошки <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-title">Породы и выбор</div>
+              <a href="poroda_catov.html"
+                ><i class="fas fa-book-open"></i> Породы кошек</a
+              >
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-title">Уход и воспитание</div>
+              <a href="vse_o_cate.html"
+                ><i class="fas fa-baby-carriage"></i> Всё о котёнке</a
+              >
+              <a href="priviki_cata.html"
+                ><i class="fas fa-syringe"></i> Прививки и вакцинация</a
+              >
+            </div>
+          </li>
+
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+        <div class="nav-right">
+          <i class="fas fa-bell notification"></i>
+          <button class="btn-login" onclick="window.location.href='login.html'">Войти</button>
+        </div>
+  </header>
+
+  <main>
+    <!-- Hero секция -->
+    <section class="contacts-hero">
+      <div class="container">
+        <h1>Свяжитесь с нами</h1>
+        <p>Мы всегда рады помочь вам и вашим питомцам</p>
+      </div>
+    </section>
+
+    <!-- Контактные карточки -->
+    <div class="container">
+      <div class="contacts-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Служба заботы</h3>
+          <a href="tel:88007006621" class="phone">8 800 700 66 21</a>
+          <div class="work-time">с 10:00 до 17:00 (МСК)</div>
+          <div class="note">Звонок по России бесплатный</div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email для связи</h3>
+          <a href="mailto:info@petstory.ru" class="email">info@petstory.ru</a>
+          <div class="work-time" style="margin-top: 16px;">По вопросам сотрудничества и предложениям</div>
+          <div class="note">Ответим в течение 24 часов</div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Юридический адрес</h3>
+          <div class="address">Московская область, г. Ступино, ул. Ситенка, д. 12</div>
+          <div class="company-info">ООО «Пет Стори»<br>ИНН 5045016560</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Форма обратной связи -->
+    <section class="feedback-section">
+      <div class="container">
+        <div class="feedback-container">
+          <div class="feedback-info">
+            <h2>Напишите нам</h2>
+            <p>Оставьте сообщение, и мы свяжемся с вами в ближайшее время. Наши специалисты помогут решить любой вопрос, связанный с заботой о вашем питомце.</p>
+            <ul class="feedback-list">
+              <li><i class="fas fa-clock"></i> Ответ в течение 24 часов</li>
+              <li><i class="fas fa-paw"></i> Консультация ветеринара</li>
+              <li><i class="fas fa-question-circle"></i> Помощь с сервисами Pet Story</li>
+            </ul>
+          </div>
+
+          <form class="feedback-form" id="feedbackForm">
+            <div class="form-group">
+              <label>Ваше имя</label>
+              <input type="text" id="name" placeholder="Анна" required>
+            </div>
+            <div class="form-group">
+              <label>Email для ответа</label>
+              <input type="email" id="email" placeholder="example@mail.com" required>
+          </div>
+            <div class="form-group">
+              <label>Тема обращения</label>
+              <select id="subject">
+                <option value="question">Вопрос о сервисе</option>
+                <option value="vet">Консультация ветеринара</option>
+                <option value="cooperation">Сотрудничество</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Сообщение</label>
+              <textarea id="message" placeholder="Опишите ваш вопрос..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> Отправить сообщение
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Карта -->
+    <section class="map-section">
+      <div class="container">
+        <div class="map-container">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aecc99c7d3f4605c1e0af9914a3401376a3a691a701018cb148a357fc8e6c0f8a&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Часто задаваемые вопросы -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Часто задаваемые вопросы</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              Как получить консультацию ветеринара?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Вы можете получить онлайн-консультацию через наш сервис. Перейдите в раздел "Сервисы" и выберите "Ветеринар онлайн". Консультация доступна 24/7.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Как связаться с технической поддержкой?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Вы можете позвонить по телефону 8 800 700 66 21 или отправить письмо на info@petstory.ru. Мы отвечаем в течение 24 часов.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Где можно оставить отзыв о работе сервиса?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Вы можете оставить отзыв в нашем приложении или через форму обратной связи на этой странице. Мы ценим мнение каждого пользователя.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Как работает возврат средств за консультацию?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Если консультация не помогла решить проблему, мы вернем деньги. Для возврата обратитесь в службу заботы по телефону или email.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Pet Story — сервис онлайн-консультаций с ветеринарами. Все права защищены.</p>
+      <p class="footer-note">Информация не заменяет очный визит к врачу. При острых состояниях обращайтесь в клинику.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Активное меню
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      if (link.getAttribute('href') === 'contacts.html') {
+        link.classList.add('active');
+      }
+    });
+
+    // FAQ аккордеон
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+
+    // Обработка формы
+    const feedbackForm = document.getElementById('feedbackForm');
+    if (feedbackForm) {
+      feedbackForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name')?.value || '';
+        const email = document.getElementById('email')?.value || '';
+        const message = document.getElementById('message')?.value || '';
+        
+        alert(`✨ Спасибо, ${name}! Ваше сообщение отправлено.\nМы ответим на ${email} в ближайшее время.`);
+        feedbackForm.reset();
+      });
+    }
+
+    // Уведомления
+    document.querySelector('.notification')?.addEventListener('click', () => {
+      alert('🔔 Уведомления: У вас нет новых уведомлений');
+    });
+
+    // Проверка авторизации
+    function checkAuth() {
+      const user = localStorage.getItem("petstory_user") || sessionStorage.getItem("petstory_user");
+      const btnLogin = document.querySelector(".btn-login");
+      if (user && btnLogin) {
+        const userData = JSON.parse(user);
+        btnLogin.innerHTML = `<i class="fas fa-user-circle"></i> ${userData.name}`;
+        btnLogin.onclick = () => {
+          if (confirm("Выйти из аккаунта?")) {
+            localStorage.removeItem("petstory_user");
+            sessionStorage.removeItem("petstory_user");
+            location.reload();
+          }
+        };
+      }
+    }
+    checkAuth();
+  </script>
+</body>
+</html>
